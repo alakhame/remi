@@ -28,5 +28,12 @@ class MenuController extends Controller
         return $this->render("InnovitProfilBundle:Menu:coursById.html.twig",array('cours'=>$cours));
     }
 	
+	public function matieresRevAction()
+    {  $menu=array();
+		$doctrine = $this->getDoctrine();
+		$menu=$doctrine->getRepository('InnovitProfilBundle:Matiere')->findAll();
+        return $this->render("InnovitProfilBundle:Menu:matieres_rev.html.twig",array('menu'=>$menu));
+    }
+	
 
 }

@@ -30,33 +30,11 @@ class __TwigTemplate_7a4647360eb2d90c84febf8ead8231d12a48133652e3f222deb6657a709
 <div id=\"\" class=\"\" style=\"margin-top:20px;margin-right:30px\">
 :اختر مادة المراد مراجعتها
 </div>\t
-";
+\t";
         // line 13
-        $context['_parent'] = (array) $context;
-        $context['_seq'] = twig_ensure_traversable(range(1, 4));
-        foreach ($context['_seq'] as $context["_key"] => $context["i"]) {
-            echo "\t
-\t\t
-\t<div id=\"matiere_rev";
-            // line 15
-            if (isset($context["i"])) { $_i_ = $context["i"]; } else { $_i_ = null; }
-            echo twig_escape_filter($this->env, $_i_, "html", null, true);
-            echo "\" style=\"\" class=\"matieres_rev b\" onclick=\"javascript:afftest()\">
-\t\t<div class=\"wrap\">
-\t\t\t<div id=\"nom_matiere_rev";
-            // line 17
-            if (isset($context["i"])) { $_i_ = $context["i"]; } else { $_i_ = null; }
-            echo twig_escape_filter($this->env, $_i_, "html", null, true);
-            echo "\" class=\"nom_mat_rev\" >اللغلة العربية</div>
-\t\t</div>
-\t</div>
-";
-        }
-        $_parent = $context['_parent'];
-        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['i'], $context['_parent'], $context['loop']);
-        $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 21
-        echo "</div>  \t
+        echo $this->env->getExtension('http_kernel')->renderFragment($this->env->getExtension('http_kernel')->controller("InnovitProfilBundle:Menu:matieresRev"));
+        echo "
+</div>  \t
 <script>function afftest(){document.getElementById('matrs_rev').style.display=\"none\";document.getElementById('test_rev').style.display=\"block\"}</script>\t
 \t
 \t<div id=\"test_rev\" class=\"\" style=\"display:none\">
@@ -64,7 +42,7 @@ class __TwigTemplate_7a4647360eb2d90c84febf8ead8231d12a48133652e3f222deb6657a709
 \t\t<div id=\"question_tete_num\" style=\"\"><span id=\"num_question\">0</span> السؤال رقم </div>
 \t\t\t<div id=\"img_quest\" class=\"\" style=\"\">
 \t\t<img class=\"\" src=\"";
-        // line 28
+        // line 21
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("images/png/128px/Shape 62.png"), "html", null, true);
         echo "\" style=\"width:100%\"/>
 \t\t</div>
@@ -111,7 +89,7 @@ class __TwigTemplate_7a4647360eb2d90c84febf8ead8231d12a48133652e3f222deb6657a709
 
 
 <script  src=\"";
-        // line 72
+        // line 65
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("scripts/script_test.js"), "html", null, true);
         echo "\" > </script>";
     }
@@ -128,6 +106,6 @@ class __TwigTemplate_7a4647360eb2d90c84febf8ead8231d12a48133652e3f222deb6657a709
 
     public function getDebugInfo()
     {
-        return array (  115 => 72,  68 => 28,  59 => 21,  48 => 17,  42 => 15,  35 => 13,  19 => 1,);
+        return array (  93 => 65,  46 => 21,  35 => 13,  19 => 1,);
     }
 }

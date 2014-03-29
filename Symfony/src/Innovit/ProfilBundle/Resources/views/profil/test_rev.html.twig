@@ -10,14 +10,7 @@
 <div id="" class="" style="margin-top:20px;margin-right:30px">
 :اختر مادة المراد مراجعتها
 </div>	
-{% for i in 1..4 %}	
-		
-	<div id="matiere_rev{{i}}" style="" class="matieres_rev b" onclick="javascript:afftest()">
-		<div class="wrap">
-			<div id="nom_matiere_rev{{i}}" class="nom_mat_rev" >اللغلة العربية</div>
-		</div>
-	</div>
-{% endfor %}
+	{{ render(controller("InnovitProfilBundle:Menu:matieresRev")) }}
 </div>  	
 <script>function afftest(){document.getElementById('matrs_rev').style.display="none";document.getElementById('test_rev').style.display="block"}</script>	
 	
