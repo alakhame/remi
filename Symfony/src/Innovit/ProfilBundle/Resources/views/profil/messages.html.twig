@@ -1,0 +1,123 @@
+﻿	
+	<div id="div_messages" class="" style="">
+	<div class="prog_chaque_matrs" id="" style="">
+الرسائل
+</div>
+		<div id="message1" class="" style="" >
+			
+			<div id="message_entet1" class="" style="" onclick="javascript: toggelf(1)">
+				<div id="titre_message1" class="" style="" >
+					أرسل رسالة جديدة
+				</div>
+				<div id="image_message1" class="" style="">
+					<img id="image_messagei1" src="{{asset("images/fleche2.png")}}" style="width:100%"/>
+				</div>
+			</div>
+			
+			
+			<div id="elements_message1" class="" style="background:white;">
+				<div style="width:90%;margin:auto">
+					<input id="messager-nous_contenu_nom_prenom" style=""  placeholder="الإسم الكامل" type="text" name="nom"></input>
+					<input id="messager-nous_contenu_objet" style=""  placeholder="الموضوع" type="text" name="objet"></input>	
+					<textarea id="messager-nous_contenu_message" style="" placeholder="السالة" name="message" ></textarea>
+					<input id="messager-nous_contenu_Envoyer" style=""  value="أرسل" type="submit" name="Evoyer"></input>
+				</div>
+			</div>
+		
+		</div>
+		
+		<div id="message2" class="" style="">
+			<div id="message_entet2" class="" style="" onclick="javascript: toggelf(2)">
+				<div id="image_message2" class="" style="" >
+					<img id="image_messagei2" src="{{asset("images/fleche2.png")}}" style="width:100%"/>
+				</div>
+				
+				<div id="titre_message2" class="" style="" >
+					الرسائل الواردة
+				</div>
+				
+			</div>
+			
+			
+			<div id="elements_message2" class="elements_message" style="">
+				<div style="width:100%;margin:auto">
+				
+	{% for i in 1..16 %}	
+	<div id="message_envoyer{{i}}" class="message" style="">
+	<div class="entete_message" style="">
+	<div id="masquer_envoyer{{i}}" class="btn_masqu_ctn_mess" style="" onclick="javascript:masquerlemessage_envoyer({{i}})">إخفاء</div>
+	<div id="afficher_envoyer{{i}}" class="btn_affich_ctn_mess" style="" onclick="javascript:afficherlemessage_envoyer({{i}})">إقرء الرسالة</div>
+	<div class="nom_entete_message" style=""><span>كريم سعيد</span></div>
+	<div class="image_entete_message" style=""><img id="" src="{{asset("images/user_icon.png")}}" style="width:100%"/></div>
+	
+	<div class="effacer_ce_message" title="Effacer ce message" style="">مسح</div>
+	</div >
+	<div id="contenu_message_glo_envoyer{{i}}" class="contenu_message_glo" style="">
+	<div class="tri_contenu_message_glo" style=""></div>
+	<div class="objet_contenu_message_glo" style=""><span>الموضوع:</span><span>درس</span></div>
+
+	<div class="text_contenu_message_glo"  id="contenu_message_envoyer{{i}}"  style="">
+	
+	sdfgsdfhsgh
+    shshfdhhhhhhhhhhhhhhhhhhhshgddf jh khkh jkh k h lk hk hk h k hk hk jh kjhk h kjh khkjhk hlkjhlkhk jh kjh lkh l h ljkh
+	sdfgsdfhsgh
+    shshfdhhhhhhhhhhhhhhhhhhhshgddf jh khkh jkh k h lk hk hk h k hk hk jh kjhk h kjh khkjhk hlkjhlkhk jh kjh lkh l h ljkh
+	sdfgsdfhsgh
+    shshfdhhhhhhhhhhhhhhhhhhhshgddf jh khkh jkh k h lk hk hk h k hk hk jh kjhk h kjh khkjhk hlkjhlkhk jh kjh lkh l h ljkh
+	sdfgsdfhsgh
+    shshfdhhhhhhhhhhhhhhhhhhhshgddf jh khkh jkh k h lk hk hk h k hk hk jh kjhk h kjh khkjhk hlkjhlkhk jh kjh lkh l h ljkh
+	</div>
+	</div>
+	</div>
+	{% endfor %}
+					
+				</div>
+			</div>
+		</div>
+	
+	<div id="message3" class="" style="">
+			<div id="message_entet3" class="" style="" onclick="javascript: toggelf(3)">
+				<div id="titre_message3" class="" style="" >
+					الرسائل المرسلة
+				</div>
+				<div id="image_message3" class="" style="" >
+					<img id="image_messagei3" src="{{asset("images/fleche2.png")}}" style="width:100%"/>
+				</div>
+			</div>
+			
+			
+			<div id="elements_message3" class="elements_message" style="">
+				<div style="width:100%;margin:auto">
+				
+	{% for i in 1..16 %}	
+	<div id="message_recu{{i}}" class="message" style="">
+	<div  class="entete_message" style="">
+	<div id="afficher_recu{{i}}" class="btn_affich_ctn_mess" style="" onclick="javascript:afficherlemessage_recu({{i}})">إقرء الرسالة</div>
+	<div id="masquer_recu{{i}}" class="btn_masqu_ctn_mess" style="" onclick="javascript:masquerlemessage_recu({{i}})">إخفاء</div>
+	<div class="nom_entete_message" style=""><span>محمد سعيد</span></div>
+	<div class="image_entete_message" style=""><img id="" src="{{asset("images/user_icon.png")}}" style="width:100%"/></div>
+	<div class="effacer_ce_message" title="Effacer ce message" style="">مسح</div>
+	</div >
+	<div id="contenu_message_glo_recu{{i}}" class="contenu_message_glo" style="">
+	<div class="tri_contenu_message_glo" style=""></div>
+	<div  class="objet_contenu_message_glo" style=""><span>الموضوع:</span><span>درس</span></div>
+	<div class="text_contenu_message_glo"  id="contenu_message_recu{{i}}"  style="">
+	
+	sdfgsdfhsgh
+    shshfdhhhhhhhhhhhhhhhhhhhshgddf jh khkh jkh k h lk hk hk h k hk hk jh kjhk h kjh khkjhk hlkjhlkhk jh kjh lkh l h ljkh
+	sdfgsdfhsghمسح
+    shshfdhhhhhhhhhhhhhhhhhhhshgddf jh khkh jkh k h lk hk hk h k hk hk jh kjhk h kjh khkjhk hlkjhlkhk jh kjh lkh l h ljkh
+	sdfgsdfhsgh
+    shshfdhhhhhhhhhhhhhhhhhhhshgddf jh khkh jkh k h lk hk hk h k hk hk jh kjhk h kjh khkjhk hlkjhlkhk jh kjh lkh l h ljkh
+	sdfgsdfhsgh
+    shshfdhhhhhhhhhhhhhhhhhhhshgddf jh khkh jkh k h lk hk hk h k hk hk jh kjhk h kjh khkjhk hlkjhlkhk jh kjh lkh l h ljkh
+	</div>
+	</div>
+	</div>
+	{% endfor %}
+
+				</div>
+			</div>
+		</div>
+	
+<script  src="{{asset("scripts/script_messages.js")}}" > </script>

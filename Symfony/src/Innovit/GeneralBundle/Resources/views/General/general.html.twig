@@ -1,0 +1,45 @@
+{% extends 'InnovitGeneralBundle:General:Layoutgeneral.php.twig' %}
+{%block corp%}
+		<div id="div_globale">	
+			{% block milieu%}
+			
+			{%endblock%}
+			<div id="inscription" class="" style="">
+				<div id="video" style="height:200px">
+				   <iframe width="100%" height="200"  src="//www.youtube.com/embed/y9Bbk-hICmk?rel=0" frameborder="0" allowfullscreen></iframe>
+				</div>
+				
+				<div id="insc" class="" style="">
+					<div id="insc_titre1" style="">لا تملك حسابا بعد وتريد الإشتراك</div>
+					<div id="insc_titre2" style="">تسجل معنا الأن</div>		  
+			
+				<div id="inputs" class="" style="opacity:1">
+					<form action="" method="post" >
+					<input class="input_inscription" style=""  placeholder="nom " type="text" ></input></br> 
+					<input class="input_inscription" style=""  placeholder="prénom" type="text" ></input></br> 
+					<input class="input_inscription" style=""  placeholder="Mot de passe" type="password" ></input></br>
+					<input class="input_inscription" style=""  placeholder="vérification de mot de pass" type="password" ></input></br>
+					<input class="input_inscription" style=""  placeholder="école" type="text" ></input></br> 
+					<input class="input_inscription" style=""  placeholder="ville" type="text" ></input></br>  
+					<input class="input_inscription" style=""  placeholder="email" type="text" ></input></br>  
+					<input type="radio" name="frites" value="oui" id="case1" checked="checked" /> <label for="oui">Etudiant</label>
+					<input type="radio" name="frites" value="non" id="case2" /> <label for="non">Professeur</label><br>
+					<label id="label_choix_niveau">Niveau</label> 
+						<select  id="choix_niveau" name="choix">
+							<option value="choix1">Choix 1</option>
+							<option value="choix2">Choix 2</option>
+							<option value="choix3">Choix 3</option>
+							<option value="choix4">Choix 4</option>
+						</select>
+					<div id="btn_insc" style="">
+						<input  style="" value="Inscription"  placeholder="Login " type="submit" ></input>
+					</div>
+					
+					</form>
+				</div>
+				</div>
+				
+				
+			</div>	
+		</div>
+{% endblock %}

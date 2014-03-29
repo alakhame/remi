@@ -1,0 +1,60 @@
+
+<div id="div_evolution" class="" style="">
+<div>
+
+
+
+<div id="" class="prog_chaque_matrs" style="">
+التقدم
+</div>
+<div id=""  class="" style="margin-top:20px;margin-right:30px">
+:التقدم بالنسبة للمواد
+</div>
+
+{% set k = 1 %}
+	{% for i in 1..5 %}	
+{% set k = k+1 %}
+    <div class="pgormat">
+	
+	
+	<div id="bar-{{i}}" class="bar-main-container a0">
+		
+		
+				<div id="bar_{{i}}" class="bar a{{i}}"  style=""></div>
+			
+		
+	</div>
+	
+	<div class="bar-percentage a0"><span id="span_percentage_{{i}}">50</span>% الرياضيات</div>
+	</div>
+	{% endfor %}
+</div>  
+
+
+<div>
+<div class="" id="" style="margin:30px">
+:التقدم العام
+</div>
+		
+	<div id="bar-{{k}}" class="bar-main-container a0">
+	<div id="bar_{{k}}" class="bar a{{k}}" style=""></div>
+	</div>
+	<div class="bar-percentage a0"><span id="span_percentage_{{k}}">50</span>% العام</div>
+</div> 
+
+
+<div>
+
+	<div id="div_conseils" class="">
+		<div id="conseils" class="effect2" style="">
+			:نصائح و مقترحات
+		</div>
+			
+		<div id="liste_conseils" class="" style="">
+			Conseils1..
+		</div>
+	</div>
+</div> 
+	
+</div>
+	<script  src="{{asset("scripts/script_evolution.js")}}" ></script>	

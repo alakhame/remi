@@ -1,0 +1,6 @@
+innovit_profil_etudiant:
+    pattern:  /profil/{name}
+    defaults: { _controller: InnovitProfilBundle:Profil:index }	
+innovit_profil_load:
+    pattern:  /profil/special/{page}
+    defaults: { _controller: InnovitProfilBundle:Profil:load }

@@ -1,0 +1,46 @@
+{%block cours_matieres%}
+<div id="div_evolution" class="" style="">
+
+<div id="" class="prog_chaque_matrs" style="">
+إعدادات الدروس
+</div>
+<div>
+ 
+
+<div id="cours">
+	<div id="titre_cours" class="">
+    :لائحة الدروس
+	</div>
+	
+{% for i in 1..16 %}	
+	
+	<div id="liste_cours" style="">
+	<div id="titre_cours_mat" class="" style="">الجهاز التنفسي </div>
+	<div id="check_cours_mat" class="" style=""> <input type="checkbox" name="option1" value="Milk"> </div>
+	
+	<div class="signler_cours" class="" title="" style=""></div>
+	</div >
+	
+{% endfor %}	
+
+</div>  
+
+
+<div id="matrs">
+{% for i in 1..4 %}	
+		
+	<div id="matiere_{{i}}" style="" class="matieres b">
+	<div id="triangle_{{i}}" class="tri" style=""></div>
+		<div class="wrap">
+			<div id="nom_matiere_{{i}}" class="nom_mat" >اللغلة العربية</div>
+			
+		</div>
+		
+	</div>
+{% endfor %}
+</div> 
+
+</div>
+	<script  src="{{asset("scripts/mtrs_cours.js")}}" ></script>
+</div>
+{%endblock%}
