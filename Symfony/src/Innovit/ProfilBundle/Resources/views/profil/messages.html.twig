@@ -3,6 +3,7 @@
 	<div class="prog_chaque_matrs" id="" style="">
 الرسائل
 </div>
+	<form action="{{ path('sendNew') }}" method="post"  >
 		<div id="message1" class="" style="" >
 			
 			<div id="message_entet1" class="" style="" onclick="javascript: toggelf(1)">
@@ -26,6 +27,8 @@
 		
 		</div>
 		
+	</form>
+		
 		<div id="message2" class="" style="">
 			<div id="message_entet2" class="" style="" onclick="javascript: toggelf(2)">
 				<div id="image_message2" class="" style="" >
@@ -41,36 +44,7 @@
 			
 			<div id="elements_message2" class="elements_message" style="">
 				<div style="width:100%;margin:auto">
-				
-	{% for i in 1..16 %}	
-	<div id="message_envoyer{{i}}" class="message" style="">
-	<div class="entete_message" style="">
-	<div id="masquer_envoyer{{i}}" class="btn_masqu_ctn_mess" style="" onclick="javascript:masquerlemessage_envoyer({{i}})">إخفاء</div>
-	<div id="afficher_envoyer{{i}}" class="btn_affich_ctn_mess" style="" onclick="javascript:afficherlemessage_envoyer({{i}})">إقرء الرسالة</div>
-	<div class="nom_entete_message" style=""><span>كريم سعيد</span></div>
-	<div class="image_entete_message" style=""><img id="" src="{{asset("images/user_icon.png")}}" style="width:100%"/></div>
-	
-	<div class="effacer_ce_message" title="Effacer ce message" style="">مسح</div>
-	</div >
-	<div id="contenu_message_glo_envoyer{{i}}" class="contenu_message_glo" style="">
-	<div class="tri_contenu_message_glo" style=""></div>
-	<div class="objet_contenu_message_glo" style=""><span>الموضوع:</span><span>درس</span></div>
-
-	<div class="text_contenu_message_glo"  id="contenu_message_envoyer{{i}}"  style="">
-	
-	sdfgsdfhsgh
-    shshfdhhhhhhhhhhhhhhhhhhhshgddf jh khkh jkh k h lk hk hk h k hk hk jh kjhk h kjh khkjhk hlkjhlkhk jh kjh lkh l h ljkh
-	sdfgsdfhsgh
-    shshfdhhhhhhhhhhhhhhhhhhhshgddf jh khkh jkh k h lk hk hk h k hk hk jh kjhk h kjh khkjhk hlkjhlkhk jh kjh lkh l h ljkh
-	sdfgsdfhsgh
-    shshfdhhhhhhhhhhhhhhhhhhhshgddf jh khkh jkh k h lk hk hk h k hk hk jh kjhk h kjh khkjhk hlkjhlkhk jh kjh lkh l h ljkh
-	sdfgsdfhsgh
-    shshfdhhhhhhhhhhhhhhhhhhhshgddf jh khkh jkh k h lk hk hk h k hk hk jh kjhk h kjh khkjhk hlkjhlkhk jh kjh lkh l h ljkh
-	</div>
-	</div>
-	</div>
-	{% endfor %}
-					
+					{{ render(controller("InnovitProfilBundle:Message:recus")) }} 
 				</div>
 			</div>
 		</div>
@@ -88,34 +62,7 @@
 			
 			<div id="elements_message3" class="elements_message" style="">
 				<div style="width:100%;margin:auto">
-				
-	{% for i in 1..16 %}	
-	<div id="message_recu{{i}}" class="message" style="">
-	<div  class="entete_message" style="">
-	<div id="afficher_recu{{i}}" class="btn_affich_ctn_mess" style="" onclick="javascript:afficherlemessage_recu({{i}})">إقرء الرسالة</div>
-	<div id="masquer_recu{{i}}" class="btn_masqu_ctn_mess" style="" onclick="javascript:masquerlemessage_recu({{i}})">إخفاء</div>
-	<div class="nom_entete_message" style=""><span>محمد سعيد</span></div>
-	<div class="image_entete_message" style=""><img id="" src="{{asset("images/user_icon.png")}}" style="width:100%"/></div>
-	<div class="effacer_ce_message" title="Effacer ce message" style="">مسح</div>
-	</div >
-	<div id="contenu_message_glo_recu{{i}}" class="contenu_message_glo" style="">
-	<div class="tri_contenu_message_glo" style=""></div>
-	<div  class="objet_contenu_message_glo" style=""><span>الموضوع:</span><span>درس</span></div>
-	<div class="text_contenu_message_glo"  id="contenu_message_recu{{i}}"  style="">
-	
-	sdfgsdfhsgh
-    shshfdhhhhhhhhhhhhhhhhhhhshgddf jh khkh jkh k h lk hk hk h k hk hk jh kjhk h kjh khkjhk hlkjhlkhk jh kjh lkh l h ljkh
-	sdfgsdfhsghمسح
-    shshfdhhhhhhhhhhhhhhhhhhhshgddf jh khkh jkh k h lk hk hk h k hk hk jh kjhk h kjh khkjhk hlkjhlkhk jh kjh lkh l h ljkh
-	sdfgsdfhsgh
-    shshfdhhhhhhhhhhhhhhhhhhhshgddf jh khkh jkh k h lk hk hk h k hk hk jh kjhk h kjh khkjhk hlkjhlkhk jh kjh lkh l h ljkh
-	sdfgsdfhsgh
-    shshfdhhhhhhhhhhhhhhhhhhhshgddf jh khkh jkh k h lk hk hk h k hk hk jh kjhk h kjh khkjhk hlkjhlkhk jh kjh lkh l h ljkh
-	</div>
-	</div>
-	</div>
-	{% endfor %}
-
+					{{ render(controller("InnovitProfilBundle:Message:send")) }} 
 				</div>
 			</div>
 		</div>

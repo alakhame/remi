@@ -148,6 +148,21 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
 
         }
 
+        // innovit_cours_load
+        if (0 === strpos($pathinfo, '/cours') && preg_match('#^/cours/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+            return $this->mergeDefaults(array_replace($matches, array('_route' => 'innovit_cours_load')), array (  '_controller' => 'Innovit\\ProfilBundle\\Controller\\MenuController::coursByIdAction',));
+        }
+
+        // sendNew
+        if ($pathinfo === '/sendNew') {
+            return array (  '_controller' => 'Innovit\\ProfilBundle\\Controller\\MessageController::sendNewAction',  '_route' => 'sendNew',);
+        }
+
+        // test
+        if ($pathinfo === '/test') {
+            return array (  '_controller' => 'InnovitProfilBundle:Test:bla',  '_route' => 'test',);
+        }
+
         // innovit_general_homepage
         if (0 === strpos($pathinfo, '/general') && preg_match('#^/general/(?P<name>qsnous|flashactus|Accueil|liensutiles)$#s', $pathinfo, $matches)) {
             return $this->mergeDefaults(array_replace($matches, array('_route' => 'innovit_general_homepage')), array (  '_controller' => 'Innovit\\GeneralBundle\\Controller\\GeneralController::indexAction',));

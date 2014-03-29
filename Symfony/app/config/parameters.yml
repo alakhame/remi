@@ -1,14 +1,14 @@
+# This file is auto-generated during the composer install
 parameters:
     database_driver: pdo_mysql
     database_host: 127.0.0.1
     database_port: null
-    database_name: symfony
+    database_name: symfonyInnovit
     database_user: root
-    database_password: null
+    database_password: root@me
     mailer_transport: smtp
     mailer_host: 127.0.0.1
-    mailer_user: null
-    mailer_password: null
+    mailer_user: khadim
+    mailer_password: khadim
     locale: en
-    secret: 01dedf46ef6207b3521585193c688866033334ec
-    database_path: null
+    secret: ThisTokenIsNotSoSecretChangeIt

@@ -11,7 +11,7 @@
 	<div id="titre_cours" class="">
     :لائحة الدروس
 	</div>
-	
+	<div id="espace_cours">
 {% for i in 1..16 %}	
 	
 	<div id="liste_cours" style="">
@@ -21,26 +21,35 @@
 	<div class="signler_cours" class="" title="" style=""></div>
 	</div >
 	
-{% endfor %}	
+{% endfor %}	</div>
 
 </div>  
 
 
 <div id="matrs">
-{% for i in 1..4 %}	
-		
-	<div id="matiere_{{i}}" style="" class="matieres b">
-	<div id="triangle_{{i}}" class="tri" style=""></div>
-		<div class="wrap">
-			<div id="nom_matiere_{{i}}" class="nom_mat" >اللغلة العربية</div>
-			
-		</div>
-		
-	</div>
-{% endfor %}
-</div> 
+{{ render(controller("InnovitProfilBundle:Menu:matCours")) }}
+</div>  
 
 </div>
 	<script  src="{{asset("scripts/mtrs_cours.js")}}" ></script>
 </div>
+	
+	<script>
+		var lk2="http://127.0.0.1/Symfony/web/app_dev.php/";
+	</script>
+
+	<script>
+		
+			function charger(elt){
+				elt++;
+				$(function() {	$( "#espace_cours" ).load(lk2+"cours/"+elt );});	
+			}
+		
+		/*var cours=new Array("evolution","test","test_rev","demande_rejoint","cours_matieres","mesprofs","messages","paramets","","","information");		
+		$(function() {	$( "#div_droite" ).load(lk2+"profil/special/"+nom_page[0]+".html.twig" );});					
+		function aff(n){$(function() {$( "#div_droite" ).load(lk2+"profil/special/"+nom_page[n]+".html.twig" );});} */
+	</script>
+
+
+
 {%endblock%}

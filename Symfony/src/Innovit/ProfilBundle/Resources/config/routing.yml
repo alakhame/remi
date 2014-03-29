@@ -4,3 +4,12 @@ innovit_profil_etudiant:
 innovit_profil_load:
     pattern:  /profil/special/{page}
     defaults: { _controller: InnovitProfilBundle:Profil:load }
+innovit_cours_load:
+    pattern:  /cours/{id}
+    defaults: { _controller: InnovitProfilBundle:Menu:coursById }
+sendNew:
+    pattern:  /sendNew
+    defaults: { _controller: InnovitProfilBundle:Message:sendNew }
+test:
+    pattern:  /test
+    defaults: { _controller: InnovitProfilBundle:Test:bla }
