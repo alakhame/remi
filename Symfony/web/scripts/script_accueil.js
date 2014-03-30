@@ -209,17 +209,18 @@ var sliderimages={},clicabletext ={},fleche ={},j,n=1;
 
 function scroll()
 {
-if(getScrollPosition()[1]>=197){
-document.getElementById('Entete').style.position="fixed";
-document.getElementById('Entete').style.top="-197px";
+if(getScrollPosition()[1]>=316){
+document.getElementById('Entete_general').style.position="fixed";
+document.getElementById('Entete_general').style.top="-316px";
 
+document.getElementById('menu').style.boxShadow="0 0 5px #000"
 }
 
 else{
 
-document.getElementById('Entete').style.position="absolute";
-document.getElementById('Entete').style.top="0px";
-document.getElementById('Entete').style.background = "#000000";  
+document.getElementById('Entete_general').style.position="absolute";
+document.getElementById('Entete_general').style.top="0px";
+document.getElementById('menu').style.boxShadow=""
 }
 
 }
