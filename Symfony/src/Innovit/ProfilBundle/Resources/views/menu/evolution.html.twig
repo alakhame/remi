@@ -2,7 +2,7 @@
 {% for m in menu %}
 	
     <div class="pgormat">
-	<div class="bar-percentage a0">  <span id="span_percentage_{{i}}">50</span>% {{ m.nom }}</div>
+	
 	
 	<div id="bar-{{i}}" class="bar-main-container a0">
 		
@@ -11,6 +11,8 @@
 			
 		
 	</div>
+	
+	<div class="bar-percentage a0">  <span id="span_percentage_{{i}}">50</span>% {{ m.nom }}</div>
 	</div>
 	{% set i=i+1 %}
 {% endfor %}
