@@ -127,7 +127,7 @@ text-align:center;
 #div1:hover,#div2:hover,#div3:hover,#div4:hover{cursor:pointer;}
 #clicable1{padding:5px;position:absolute;width:100%;margin-top:1px;margin-left:1px;border:solid 1px #59407F;background:rgba(132, 88, 131,0.1)}
 #clicable2,#clicable3,#clicable4{border:solid 1px #59407F;position:absolute;padding:5px;width:100%;margin-top:1px;display:none;margin-left:1px;background:rgba(132, 88, 131,0.1)}
-
+#nom_matiere_1{margin-top:10px}
 #clicable1_text,#clicable2_text,#clicable3_text,#clicable4_text{position:relative;text-align:center;font-family:Verdana;font-size:1.1em;word-wrap:break-word;color:#59407F}
 #div_evolution{width:100%;}
 #div_gauche_liste{margin-left:48px;background:white;display:inline-block;vertical-align:top;width:200px;margin-top:20px;}
