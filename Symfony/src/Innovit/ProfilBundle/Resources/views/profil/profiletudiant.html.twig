@@ -88,11 +88,11 @@
 	<script>
 		var nom_page=new Array("evolution","test","test_rev","demande_rejoint","cours_matieres","mesprofs","messages","paramets","","","information");			
 		$(function() {
-			$( "#div_droite" ).load(lk+nom_page[0]+".html.twig" );
+			$( "#div_droite_load" ).load(lk+nom_page[0]+".html.twig" );
 		});					
 		function aff(n){
 			$(function() {
-				$( "#div_droite" ).load( lk+nom_page[n]+".html.twig" );
+				$( "#div_droite_load" ).load( lk+nom_page[n]+".html.twig" );
 			});
 		}
 	</script>
