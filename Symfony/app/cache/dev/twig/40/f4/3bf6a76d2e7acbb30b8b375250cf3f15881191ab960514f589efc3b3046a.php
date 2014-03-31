@@ -22,10 +22,7 @@ class __TwigTemplate_40f43bf6a76d2e7acbb30b8b375250cf3f15881191ab960514f589efc3b
         $context['_seq'] = twig_ensure_traversable((isset($context["menu"]) ? $context["menu"] : null));
         foreach ($context['_seq'] as $context["_key"] => $context["m"]) {
             echo "\t
-";
-            // line 3
-            $context["i"] = ((isset($context["i"]) ? $context["i"] : null) + 1);
-            echo "\t\t
+\t
 \t<div id=\"matiere_";
             // line 4
             echo twig_escape_filter($this->env, (isset($context["i"]) ? $context["i"] : null), "html", null, true);
@@ -46,7 +43,10 @@ class __TwigTemplate_40f43bf6a76d2e7acbb30b8b375250cf3f15881191ab960514f589efc3b
             echo twig_escape_filter($this->env, (isset($context["i"]) ? $context["i"] : null), "html", null, true);
             echo "\" class=\"tri\" style=\"\"></div>
 \t</div>
-\t
+";
+            // line 11
+            $context["i"] = ((isset($context["i"]) ? $context["i"] : null) + 1);
+            echo "\t\t
 \t
 ";
         }
@@ -67,6 +67,6 @@ class __TwigTemplate_40f43bf6a76d2e7acbb30b8b375250cf3f15881191ab960514f589efc3b
 
     public function getDebugInfo()
     {
-        return array (  46 => 9,  36 => 6,  31 => 4,  27 => 3,  21 => 2,  19 => 1,);
+        return array (  48 => 11,  43 => 9,  33 => 6,  28 => 4,  21 => 2,  19 => 1,  60 => 31,  35 => 9,  26 => 2,  20 => 1,);
     }
 }

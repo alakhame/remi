@@ -21,13 +21,15 @@ class __TwigTemplate_b8b58b9a65ee0a994f6513ad96edc9b5515f062902698bb8b0d033fc394
         foreach ($context['_seq'] as $context["_key"] => $context["c"]) {
             echo "\t
 \t
-\t<div id=\"liste_cours\" style=\"\">
-\t<div id=\"check_cours_mat\" class=\"\" style=\"\"> <input type=\"checkbox\" name=\"option1\" value=\"Milk\"> </div>
-\t<div id=\"titre_cours_mat\" class=\"\" style=\"\"> ";
+\t<div class=\"liste_cours\" style=\"\">
+\t<div class=\"signler_cours\" class=\"\" title=\"\" style=\"\"></div>
+\t<div class=\"titre_cours_mat\" class=\"\" style=\"\"> ";
             // line 5
             echo twig_escape_filter($this->env, $this->getAttribute((isset($context["c"]) ? $context["c"] : null), "titre"), "html", null, true);
             echo " </div>
-\t<div id=\"signler_cours\" class=\"\" title=\"\" style=\"\"></div>
+\t<div class=\"check_cours_mat\" class=\"\" style=\"\"> <input type=\"checkbox\" name=\"option1\" value=\"Milk\"> </div>
+\t
+\t
 \t</div >
 \t
 ";
@@ -35,7 +37,7 @@ class __TwigTemplate_b8b58b9a65ee0a994f6513ad96edc9b5515f062902698bb8b0d033fc394
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['c'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 9
+        // line 11
         echo "\t";
     }
 
@@ -51,6 +53,6 @@ class __TwigTemplate_b8b58b9a65ee0a994f6513ad96edc9b5515f062902698bb8b0d033fc394
 
     public function getDebugInfo()
     {
-        return array (  39 => 9,  28 => 5,  19 => 1,);
+        return array (  41 => 11,  28 => 5,  19 => 1,);
     }
 }

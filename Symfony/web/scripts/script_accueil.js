@@ -212,7 +212,6 @@ function scroll()
 if(getScrollPosition()[1]>=316){
 document.getElementById('Entete_general').style.position="fixed";
 document.getElementById('Entete_general').style.top="-316px";
-
 document.getElementById('menu').style.boxShadow="0 0 5px #000"
 }
 

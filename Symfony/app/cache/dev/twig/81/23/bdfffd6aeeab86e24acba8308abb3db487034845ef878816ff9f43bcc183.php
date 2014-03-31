@@ -29,48 +29,34 @@ class __TwigTemplate_8123bdfffd6aeeab86e24acba8308abb3db487034845ef878816ff9f43b
 إعدادات الدروس
 </div>
 <div>
- 
+<div id=\"matrs\">
+";
+        // line 9
+        echo $this->env->getExtension('http_kernel')->renderFragment($this->env->getExtension('http_kernel')->controller("InnovitProfilBundle:Menu:matCours"));
+        echo "
+</div> 
 
 <div id=\"cours\">
 \t<div id=\"titre_cours\" class=\"\">
     :لائحة الدروس
 \t</div>
+
+
+ 
 \t<div id=\"espace_cours\">
-";
-        // line 15
-        $context['_parent'] = (array) $context;
-        $context['_seq'] = twig_ensure_traversable(range(1, 16));
-        foreach ($context['_seq'] as $context["_key"] => $context["i"]) {
-            echo "\t
-\t
-\t<div id=\"liste_cours\" style=\"\">
-\t<div id=\"titre_cours_mat\" class=\"\" style=\"\">الجهاز التنفسي </div>
-\t<div id=\"check_cours_mat\" class=\"\" style=\"\"> <input type=\"checkbox\" name=\"option1\" value=\"Milk\"> </div>
-\t
-\t<div class=\"signler_cours\" class=\"\" title=\"\" style=\"\"></div>
-\t</div >
-\t
-";
-        }
-        $_parent = $context['_parent'];
-        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['i'], $context['_parent'], $context['loop']);
-        $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 24
-        echo "\t</div>
+<div id=\"espace_cours_debut\">إختر المادة أعلاه</div>\t
+
+
+</div>
 
 </div>  
 
 
-<div id=\"matrs\">
-";
-        // line 30
-        echo $this->env->getExtension('http_kernel')->renderFragment($this->env->getExtension('http_kernel')->controller("InnovitProfilBundle:Menu:matCours"));
-        echo "
-</div>  
+
 
 </div>
 \t<script  src=\"";
-        // line 34
+        // line 31
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("scripts/mtrs_cours.js"), "html", null, true);
         echo "\" ></script>
 </div>
@@ -103,6 +89,6 @@ class __TwigTemplate_8123bdfffd6aeeab86e24acba8308abb3db487034845ef878816ff9f43b
 
     public function getDebugInfo()
     {
-        return array (  74 => 34,  67 => 30,  59 => 24,  41 => 15,  26 => 2,  20 => 1,);
+        return array (  60 => 31,  35 => 9,  26 => 2,  20 => 1,);
     }
 }
