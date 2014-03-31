@@ -9,16 +9,17 @@ input{text-align: right;}
 textatrea{text-align: right;}
 
 #Entete{height:230px;width:100%;position:absolute;z-index:2;top:0px}
-#Entete_general{height:350px;width:100%;position:absolute;z-index:2;top:0px;background: linear-gradient(to bottom, #171B37 1%, #4A5078 100%) repeat scroll 0% 0% transparent;}
+#Entete_general{height:350px;width:100%;position:absolute;z-index:2;top:0px;background-image:url('../images/classe.png');}
+
 .box{height:230px;position:relative}
-#imag_back_ground{position:absolute;width:100%;z-index:0;height:100%}
+#imag_back_ground{position:absolute;width:100%;z-index:0;height:100%;background:rgba(0,0,0,0.5)}
 
 #grand_titre{color:white;text-align:center;font-weight:normal;font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;font-size:2.5em;width:400px;margin:auto}
 
 #logo{width:250px;margin:auto}
 #logo_image{width:100%}
 #grand_titre_general{color:white;text-align:center;font-weight:normal;font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;font-size:2.3em;width:500px;margin:auto;margin-top:20px}
-#grand_text_general{color:#CBCFE7;text-align:center;font-weight:normal;font-family:Arial;font-size:1.1em;width:400px;margin:auto;margin-top:30px}
+#grand_text_general{color:#EEEEEE;text-align:center;font-weight:normal;font-family:Arial;font-size:1.1em;width:400px;margin:auto;margin-top:30px}
 #logo_general{width:250px;margin:auto;margin-top:30px}
 
 
@@ -58,7 +59,7 @@ src: url(../font/Thabit.ttf);
 .prog_chaque_matrs{font-size:2em;color:#59407F;width:100%;border-bottom:1px solid rgb(230,230,230);font-family: myFirstFont,Arial, Helvetica, sans-serif;margin:auto;padding:8px 0px;text-align:center}
 
 
-.titre{font-size:1.3em;vertical-align:middle;color:#800080;text-align:center}
+.titre{font-size:2em;vertical-align:middle;color:#800080;text-align:center}
 
 .text{font-size:0.8em;margin-top:5px;
 text-align:justify;color:rgb(20,20,20);font-family:verdana;
