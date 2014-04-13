@@ -15,7 +15,7 @@ else{
 
 document.getElementById('Entete').style.position="absolute";
 document.getElementById('Entete').style.top="0px";
-document.getElementById('Entete').style.background = "#000000";  
+ 
 }
 
 }

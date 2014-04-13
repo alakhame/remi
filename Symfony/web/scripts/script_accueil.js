@@ -212,7 +212,6 @@ function scroll()
 if(getScrollPosition()[1]>=316){
 document.getElementById('Entete_general').style.position="fixed";
 document.getElementById('Entete_general').style.top="-316px";
-
 document.getElementById('menu').style.boxShadow="0 0 5px #000"
 }
 
@@ -225,6 +224,8 @@ document.getElementById('menu').style.boxShadow=""
 
 }
 
-
+function aff_barre(n){	 for(j=1;j<=4;j++){document.getElementById('menu_'+j).style.background="black"}
+document.getElementById('menu_'+n).style.background="#94CE9B";
+}
 
 
