@@ -17,7 +17,8 @@ class MessageController extends Controller
     }
 	
 	public function  sendAction()
-    {  $msgs=array();
+    {  	
+		$msgs=array();
 		$criteres=array("idExp"=>1);
 		$doctrine = $this->getDoctrine();
 		$msgs=$doctrine->getRepository('InnovitProfilBundle:Message')->findby($criteres);

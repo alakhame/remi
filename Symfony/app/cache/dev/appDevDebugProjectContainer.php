@@ -3423,7 +3423,7 @@ class appDevDebugProjectContainer extends Container
             'kernel.root_dir' => 'C:/Users/khadim/Desktop/wamp/www/remi/Symfony/app',
             'kernel.environment' => 'dev',
             'kernel.debug' => true,
-            'kernel.name' => 'app',
+            'kernel.name' => 'ap_',
             'kernel.cache_dir' => 'C:/Users/khadim/Desktop/wamp/www/remi/Symfony/app/cache/dev',
             'kernel.logs_dir' => 'C:/Users/khadim/Desktop/wamp/www/remi/Symfony/app/logs',
             'kernel.bundles' => array(
