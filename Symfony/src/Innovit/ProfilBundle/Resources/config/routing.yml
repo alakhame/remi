@@ -13,3 +13,9 @@ sendNew:
 test:
     pattern:  /test
     defaults: { _controller: InnovitProfilBundle:Test:bla }
+test_prof:
+    pattern:  /sendquest
+    defaults: { _controller: InnovitProfilBundle:Testprof:sendquest }
+test_modif_prof:
+    pattern:  /modifquest
+    defaults: { _controller: InnovitProfilBundle:Testprof:modifierquest }

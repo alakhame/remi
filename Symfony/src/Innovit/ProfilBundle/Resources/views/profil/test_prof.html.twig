@@ -2,8 +2,9 @@
 	<div id="" class="prog_chaque_matrs" style="">
 		إختبار
 	</div>
+	<form action="http://127.0.0.1/remi/Symfony/web/app_dev.php/sendquest" method="post" >
 	<div class="inputs_test_pr" class="" style="">
-		
+			
 		<div id="" class="" style="margin-bottom:20px;text-decoration:underline">
 			إظافة سؤال جديد
 		</div>
@@ -18,14 +19,14 @@
 		
 		</div>
 		<div>
-		<select  id="choix_niveau_test" name="choix">
+		<select  id="choix_niveau_test" name="choix_cours">
 							<option value="choix1">Choix 1</option>
 							<option value="choix2">Choix 2</option>
 							<option value="choix3">Choix 3</option>
 							<option value="choix4">Choix 4</option>
 		</select>
 		
-		<select  id="choix_matr_test" name="choix">
+		<select  id="choix_matr_test" name="choix_matr">
 							<option value="choix1">الرياضيات</option>
 							<option value="choix2">علوم الحياة و الأرض</option>
 							<option value="choix3">الفزياء و الكمياء</option>
@@ -33,12 +34,12 @@
 							<option value="choix4">الفرنسية</option>
 		</select>
 		</div>
-		<form action="" method="post" >
-			<textarea id="textarea_test"placeholder="السؤال" class="input_test_pr" style="text-align:right;max-width:98%;"></textarea></br> 
-			<input class="input_test_pr" style=""  placeholder="الإجابة1 الصحيحة" type="text" ></input></br> 
-			<input class="input_test_pr" style=""  placeholder="الإجابة2" type="text" ></input></br> 
-			<input class="input_test_pr" style=""  placeholder="الإجابة3" type="text" ></input></br>  
-			<input class="input_test_pr" style=""  placeholder="الإجابة4" type="text" ></input></br>  
+	
+			<textarea id="textarea_test"placeholder="السؤال" name="question" class="input_test_pr" style="text-align:right;max-width:98%;"></textarea></br> 
+			<input class="input_test_pr" style="" name="rep1"  placeholder="الإجابة1 الصحيحة" type="text" ></input></br> 
+			<input class="input_test_pr" style="" name="rep2"  placeholder="الإجابة2" type="text" ></input></br> 
+			<input class="input_test_pr" style="" name="rep3"  placeholder="الإجابة3" type="text" ></input></br>  
+			<input class="input_test_pr" style="" name="rep4"  placeholder="الإجابة4" type="text" ></input></br>  
 					
 			<div id="btn_insc" style="">
 				<input  style="" value="أضف"  placeholder="Login " type="submit" ></input>
@@ -49,75 +50,9 @@
 	
 	
 		<div id="mes_questions" class="" style="">
-		<div class="" id="" style="margin-bottom:20px">
-			:أسئلتي المقترحة
-		</div>	
-		<div class="" id="mes_questions_pr" style="">
-			{% for i in 1..6 %}	
-	<div id="consl_prof{{i}}" class="" style="width:100%">
+		{{ render(controller("InnovitProfilBundle:Testprof:chargerquest")) }} 
 	
-	<div class="entete_mes_questions" style="">
-	<div id="afficher_consls{{i}}" class="btn_affich_consl_prof" style="" onclick="javascript:afficherlemessage_envoyer({{i}})">السؤال</div>
-	<div id="masquer_consls{{i}}" class="btn_masqu_consl_prof" style="" onclick="javascript:masquerlemessage_envoyer({{i}})">إخفاء</div>
-	<div class="nom_consl_prof" style="">السادس إبتدائي</div>
-	<div class="image_consl_prof" style=""><img id="" src="{{asset("images/question.png")}}" style="width:100%"/></div>
-	<div class="effacer_ce_message" title="Effacer ce message" style="">مسح</div>
-	</div >
-	
-	<div id="contenu_consl_prof{{i}}" class="contenu_consl_prof" style="width:100%">
-	<div class="tri_consl_prof" style=""></div>
-	<div class="contenu_qust_prof"  id="text_consl_prof{{i}}"  style="">
-	
-		
-		<div id="" class="" style="margin-bottom:20px;text-decoration:underline">
-			إظافة سؤال جديد
 		</div>
-		<div>			
-		<div id="" class="" style="width:40%;display:inline-block">
-			إختيار المتوى
-		</div>
-		
-		<div id="" class="" style="width:40%;display:inline-block;margin-left:19%">
-			إختيار المادة
-		</div>
-		
-		</div>
-		<div>
-		<select  id="choix_niveau_test" name="choix">
-							<option value="choix1">Choix 1</option>
-							<option value="choix2">Choix 2</option>
-							<option value="choix3">Choix 3</option>
-							<option value="choix4">Choix 4</option>
-		</select>
-		
-		<select  id="choix_matr_test" name="choix">
-							<option value="choix1">الرياضيات</option>
-							<option value="choix2">علوم الحياة و الأرض</option>
-							<option value="choix3">الفزياء و الكمياء</option>
-							<option value="choix4">التاريخ</option>
-							<option value="choix4">الفرنسية</option>
-		</select>
-		</div>
-		<form action="" method="post" >
-			<textarea id="textarea_test"placeholder="السؤال" class="input_test_pr" style="text-align:right;max-width:98%;"></textarea></br> 
-			<input class="input_test_pr" style=""  placeholder="الإجابة1 الصحيحة" type="text" ></input></br> 
-			<input class="input_test_pr" style=""  placeholder="الإجابة2" type="text" ></input></br> 
-			<input class="input_test_pr" style=""  placeholder="الإجابة3" type="text" ></input></br>  
-			<input class="input_test_pr" style=""  placeholder="الإجابة4" type="text" ></input></br>  
-					
-			<div id="btn_insc" style="">
-				<input  style="" value="حفض التغير"  placeholder="Login " type="submit" ></input>
-			</div>
-		</form>
-	
-		
-	</div>
-	</div>
-	{% endfor %}
-			
-		</div>
-	
-	</div>
 	
 	<script  src="{{asset("scripts/script_quests_prof.js")}}" > </script>
 </div>

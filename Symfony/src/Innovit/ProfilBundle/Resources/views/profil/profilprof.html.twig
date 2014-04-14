@@ -85,10 +85,11 @@
 	    
 
 	<script>
+	var lki='http://127.0.0.1/remi/Symfony/web/app_dev.php/profil/special/';
 	var nom_page_prof=new Array("test_prof","mesetudiants","demande_ajout","messages","paramets","information","","","","");		
-    $(function() {	$( "#div_droite_load" ).load("http://localhost/Symfony/web/app_dev.php/profil/special/"+nom_page_prof[0]+".html.twig" );});			
-	function affinfo(){$(function() {$( "#div_droite_load" ).load("http://localhost/Symfony/web/app_dev.php/profil/special/paramets.html.twig" );});}	
-	function aff(n){$(function() {$( "#div_droite_load" ).load("http://localhost/Symfony/web/app_dev.php/profil/special/"+nom_page_prof[n]+".html.twig" );});}
+    $(function() {	$( "#div_droite_load" ).load(lki+nom_page_prof[0]+".html.twig" );});			
+	function affinfo(){$(function() {$( "#div_droite_load" ).load(lki+"paramets.html.twig" );});}	
+	function aff(n){$(function() {$( "#div_droite_load" ).load(lki+nom_page_prof[n]+".html.twig" );});}
 	</script>
 	<script  src="{{asset("scripts/script_liste_prof.js")}}" ></script>	
 
