@@ -71,7 +71,8 @@ class DefaultRepositoryFactory implements RepositoryFactory
             $configuration       = $entityManager->getConfiguration();
             $repositoryClassName = $configuration->getDefaultRepositoryClassName();
         }
-
-        return new $repositoryClassName($entityManager, $metadata);
+		
+        return new $repositoryClassName($entityManager, $metadata); 
+		
     }
 }
