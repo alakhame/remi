@@ -68,7 +68,7 @@ src: url(../font/Thabit.ttf);
 #menu_2{width:140px;display:inline-block;vertical-align:middle;font-size:1em;text-align:center;margin-left:5px;padding-top:6px;padding-bottom:6px;}
 #menu_3{width:120px;display:inline-block;vertical-align:middle;font-size:1em;text-align:center;margin-left:5px;padding-top:6px;padding-bottom:6px;}
 #menu_4{width:120px;display:inline-block;vertical-align:middle;font-size:1em;text-align:center;margin-left:5px;padding-top:6px;padding-bottom:6px;}
-#div_authentification{width:60%;margin:auto;box-shadow: 0 0  3px #999999;background:white;border:1px solid #999999;}
+#div_authentification{width:60%;margin:auto;margin-top:30px;box-shadow: 0 0  3px #999999;background:white;border:1px solid #999999;}
 .input_authentification{width:65%;margin:auto;margin-top:10px;}
 #sing_in{font-size:1em;color:white;display:inline-block;padding:6px;position:absolute;left:0px;text-align:center}
 #sing_in:hover{background:#59407F;cursor:pointer}
