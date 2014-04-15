@@ -1,0 +1,31 @@
+{% extends 'InnovitGeneralBundle:General:Layoutprofil.php.twig' %}
+{%block corp%}
+
+	<div id="div_authentification" >
+			
+	    <div id="titre_login" style="">
+			المرجو إدخال معلوماتك
+			
+		</div>
+		<div style="margin-top:40px" class="input_authentification">
+			
+			<input  style="" class="input"  placeholder="" type="text" ></input>
+			<div class="logi" style="">اسم التسجيل</div>
+		</div>
+		<div class="input_authentification">
+			
+			<input  style="" class="input"  placeholder="" type="password"></input>
+			<div class="logi" style="">كلمة السر</div>
+		</div>
+		<div class="input_authentification" style="width:100px;margin:auto;margin-top:10px">
+			<input  style="width:100%;text-align:center" class="" value="دخول"  placeholder="Login " type="submit" >
+			</input>
+		</div>
+		<div class="" style="width:65%;margin:auto;margin-top:10px">
+			<div id="mot_de_passe_oubl"style="">نسيت كلمة السر؟</div>
+			<a id="" href="{{path('innovit_general_homepage',{ name:"Accueil"})}}"><div id="login_inscription" style="">التسجيل من هنا</div></a>
+		</div>
+	</div>
+	
+
+{%endblock%}

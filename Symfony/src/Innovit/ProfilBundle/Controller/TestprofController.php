@@ -28,7 +28,7 @@ class TestprofController extends Controller
 				$question->setRep2($_POST['rep2']);
 				$question->setRep3($_POST['rep3']);
 				$question->setRep4($_POST['rep4']);
-				$question->setExplications('');
+				$question->setExplications($_POST['justification']);
 				$question->setRep($_POST['rep1']);
 				
 				$em->persist($question);
@@ -59,13 +59,13 @@ public function chargerquestAction()
 			
 				$em = $this->getDoctrine()->getManager();
 				$question_modf = $em->getRepository('InnovitProfilBundle:Question')->find($_POST['modif_id']);
-				$question_modf->setIdCours(1);
+				$question_modf->setIdCours($_POST['choix_cours)']);
 				$question_modf->setQuestion($_POST['modif_question']);
 				$question_modf->setRep1($_POST['modif_rep1']);
 				$question_modf->setRep2($_POST['modif_rep2']);
 				$question_modf->setRep3($_POST['modif_rep3']);
 				$question_modf->setRep4($_POST['modif_rep4']);
-				$question_modf->setExplications('');
+				$question_modf->setExplications($_POST['modif_justi']);
 				$question_modf->setRep($_POST['modif_rep1']);
 				
 				

@@ -179,7 +179,7 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
         }
 
         // innovit_general_homepage
-        if (0 === strpos($pathinfo, '/general') && preg_match('#^/general/(?P<name>qsnous|flashactus|Accueil|liensutiles)$#s', $pathinfo, $matches)) {
+        if (0 === strpos($pathinfo, '/general') && preg_match('#^/general/(?P<name>qsnous|flashactus|Accueil|liensutiles|login)$#s', $pathinfo, $matches)) {
             return $this->mergeDefaults(array_replace($matches, array('_route' => 'innovit_general_homepage')), array (  '_controller' => 'Innovit\\GeneralBundle\\Controller\\GeneralController::indexAction',));
         }
 
