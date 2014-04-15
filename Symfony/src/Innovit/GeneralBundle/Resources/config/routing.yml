@@ -2,7 +2,11 @@ innovit_general_homepage:
     pattern:  /general/{name}
     defaults: { _controller: InnovitGeneralBundle:General:index }
     requirements:
+<<<<<<< HEAD
         name: qsnous|flashactus|Accueil|liensutiles
 innovit_haha:
     pattern:  /haha
     defaults: { _controller: InnovitGeneralBundle:General:haha }
+=======
+        name: qsnous|flashactus|Accueil|liensutiles|login
+>>>>>>> d5874b2aa449a5b8f8e951f0db8c553f3f423e67

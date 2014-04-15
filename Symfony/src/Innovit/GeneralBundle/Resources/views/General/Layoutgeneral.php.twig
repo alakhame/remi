@@ -30,20 +30,21 @@
 			
 			<div id="menu" style="">
 <div id="menu_a" style="">	
-	<a id="menu_a_4" href="{{path('innovit_general_homepage',{ name:"liensutiles"})}}""><div id="menu_4" style="" >مواقع مفيدة</div></a>
+	<a id="menu_a_4" href="{{path('innovit_general_homepage',{ name:"liensutiles"})}}"><div id="menu_4" style="" >مواقع مفيدة</div></a>
 		
-	<a id="menu_a_3" href="{{path('innovit_general_homepage',{ name:"flashactus"})}}""><div id="menu_3" style="">مستجدات</div></a>
+	<a id="menu_a_3" href="{{path('innovit_general_homepage',{ name:"flashactus"})}}"><div id="menu_3" style="">مستجدات</div></a>
 	
-	<a id="menu_a_2" href="{{path('innovit_general_homepage',{ name:"qsnous"})}}""><div id="menu_2" style="" >من نحن؟</div></a>
+	<a id="menu_a_2" href="{{path('innovit_general_homepage',{ name:"qsnous"})}}"><div id="menu_2" style="" >من نحن؟</div></a>
 	
-	<a id="menu_a_1" href="{{path('innovit_general_homepage',{ name:"Accueil"})}}""><div id="menu_1" style="" > 
+	<a id="menu_a_1" href="{{path('innovit_general_homepage',{ name:"Accueil"})}}"><div id="menu_1" style="" > 
 	<div id="img_acc" style="" ><img src="{{asset("images/accueil_rond.png")}}" id="img_acc" style="height:100%;"/></div>
 	الرئسية</div></a>
-	<div id="sing_in" style="" onclick="javascript:affichersingin()" >تسجيل الدخول</div>
+	<a id="" href="{{path('innovit_general_homepage',{ name:"login"})}}"><div id="sing_in" style="" >تسجيل الدخول</div></a>
 		
 </div>
 
 
+<<<<<<< HEAD
 <div id="ligne_d_adaptation" style="" >
 				<form action="{{ path("fos_user_security_check") }}" method="post">
 					<input type="hidden" name="_csrf_token" value="{{ csrf_token }}" />
@@ -79,6 +80,8 @@
 	function affichersingin(){document.getElementById("div_authentification").style.display="block"}
 	function fermersingin() {document.getElementById("div_authentification").style.display="none"}</script>
 </div>
+=======
+>>>>>>> d5874b2aa449a5b8f8e951f0db8c553f3f423e67
 </div>
 
 
