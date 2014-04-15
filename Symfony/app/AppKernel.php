@@ -21,6 +21,7 @@ class AppKernel extends Kernel
             new Innovit\GeneralBundle\InnovitGeneralBundle(),
             new Innovit\ProfilBundle\InnovitProfilBundle(),
             new Innovit\UserBundle\InnovitUserBundle(),
+            new Innovit\QuestionBundle\InnovitQuestionBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {
