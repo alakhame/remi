@@ -1,6 +1,6 @@
 	
 	
-	var inc=0,k=0;
+	var inc=0,k=0, kha=5;
 	
 	function nextQuestion(){
 		  var div1=$("#progression_question");
@@ -55,8 +55,35 @@
 		 
 	}
 	
+	 
 	
+	function getQuestion(id)
+	{
+		var xhr = getXMLHttpRequest();
+	
+	xhr.onreadystatechange = function() {
+		if (xhr.readyState == 4 && (xhr.status == 200 || xhr.status == 0)) {
+					var q=document.getElementById("question");
+					//var cn=document.createTextNode(xhr.responseXML.getElementsByTagName(question));
+					//q.appendChild(cn) ;
+					console.log(xhr.responseXML.getElementsByTagName('reponse1').innerHTML);
+					
+		}
+	};
+	
+	xhr.open("GET", "http://127.0.0.1/remi/Symfony/web/app_dev.php/questions/pick/"+id, true);
+	xhr.send(null);
+	}
+	
+	
+	getQuestion(25);
+		
+		var rep1=document.getElementById("rep1_a"); 
+		
+		
+		
 	$("#valider").click(function(){
 		nextQuestion();
-	}); 
-
+		//getQuestion(kha); kha=kha+1 ;
+	
+	});
