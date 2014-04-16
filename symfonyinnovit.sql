@@ -52,20 +52,6 @@ CREATE TABLE IF NOT EXISTS `cours` (
 --
 
 INSERT INTO `cours` (`id`, `id_matiere`, `titre`) VALUES
-(1, 1, 'cours 1'),
-(2, 1, 'cours 2'),
-(3, 1, 'cours  3'),
-(4, 1, 'cours 4'),
-(5, 1, 'cours 5'),
-(7, 2, 'cours 2'),
-(9, 2, 'cours 4'),
-(11, 3, 'cours 1'),
-(12, 3, 'cours 2'),
-(15, 3, 'cours 5'),
-(17, 4, 'cours 2'),
-(18, 4, 'cours 3'),
-(19, 4, 'cours 4'),
-(20, 4, 'cours 5'),
 (31, 2, 'الأعداد الصحيحة الطبيعية'),
 (32, 2, 'الأعداد العشرية'),
 (33, 2, 'جمع الأعداد الطبيعية و العشرية'),
