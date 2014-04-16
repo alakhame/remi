@@ -141,9 +141,9 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
         }
 
         if (0 === strpos($pathinfo, '/profil')) {
-            // innovit_profil_etudiant
-            if (preg_match('#^/profil/(?P<name>[^/]++)$#s', $pathinfo, $matches)) {
-                return $this->mergeDefaults(array_replace($matches, array('_route' => 'innovit_profil_etudiant')), array (  '_controller' => 'Innovit\\ProfilBundle\\Controller\\ProfilController::indexAction',));
+            // innovit_profil
+            if (preg_match('#^/profil/(?P<type>[^/]++)(?:/(?P<id>[^/]++))?$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'innovit_profil')), array (  '_controller' => 'Innovit\\ProfilBundle\\Controller\\ProfilController::indexAction',  'id' => 4,));
             }
 
             // innovit_profil_load
@@ -178,9 +178,17 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
             return array (  '_controller' => 'Innovit\\ProfilBundle\\Controller\\TestprofController::modifierquestAction',  '_route' => 'test_modif_prof',);
         }
 
-        // innovit_general_homepage
-        if (0 === strpos($pathinfo, '/general') && preg_match('#^/general/(?P<name>qsnous|flashactus|Accueil|liensutiles|login)$#s', $pathinfo, $matches)) {
-            return $this->mergeDefaults(array_replace($matches, array('_route' => 'innovit_general_homepage')), array (  '_controller' => 'Innovit\\GeneralBundle\\Controller\\GeneralController::indexAction',));
+        if (0 === strpos($pathinfo, '/general')) {
+            // innovit_general_homepage
+            if (preg_match('#^/general/(?P<name>qsnous|flashactus|Accueil|liensutiles|login)$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'innovit_general_homepage')), array (  '_controller' => 'Innovit\\GeneralBundle\\Controller\\GeneralController::indexAction',));
+            }
+
+            // innovit_redirection
+            if ($pathinfo === '/general/redirection') {
+                return array (  '_controller' => 'Innovit\\GeneralBundle\\Controller\\GeneralController::redirectionAction',  '_route' => 'innovit_redirection',);
+            }
+
         }
 
         // HelloTheWorld

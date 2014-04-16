@@ -117,6 +117,8 @@
   'InnovitGeneralBundle:General:liensutiles.html.twig' => 'C:\\wamp\\www\\remi\\Symfony\\src\\Innovit\\GeneralBundle/Resources/views/General/liensutiles.html.twig',
   'InnovitGeneralBundle:General:login.html.twig' => 'C:\\wamp\\www\\remi\\Symfony\\src\\Innovit\\GeneralBundle/Resources/views/General/login.html.twig',
   'InnovitGeneralBundle:General:qsnous.html.twig' => 'C:\\wamp\\www\\remi\\Symfony\\src\\Innovit\\GeneralBundle/Resources/views/General/qsnous.html.twig',
+  'InnovitGeneralBundle:General:redirection.html.twig' => 'C:\\wamp\\www\\remi\\Symfony\\src\\Innovit\\GeneralBundle/Resources/views/General/redirection.html.twig',
+  'InnovitGeneralBundle::layout.html.twig' => 'C:\\wamp\\www\\remi\\Symfony\\src\\Innovit\\GeneralBundle/Resources/views/layout.html.twig',
   'InnovitProfilBundle:enseignant:mesProfs.html.twig' => 'C:\\wamp\\www\\remi\\Symfony\\src\\Innovit\\ProfilBundle/Resources/views/enseignant/mesProfs.html.twig',
   'InnovitProfilBundle:menu:coursById.html.twig' => 'C:\\wamp\\www\\remi\\Symfony\\src\\Innovit\\ProfilBundle/Resources/views/menu/coursById.html.twig',
   'InnovitProfilBundle:menu:evolution.html.twig' => 'C:\\wamp\\www\\remi\\Symfony\\src\\Innovit\\ProfilBundle/Resources/views/menu/evolution.html.twig',
