@@ -87,3 +87,11 @@
 		//getQuestion(kha); kha=kha+1 ;
 	
 	});
+=======
+
+function caucher(n){
+for(var i=1; i<5 ;i++){document.getElementById('chek'+i).checked=false };
+document.getElementById('chek'+n).checked=true;  
+
+}
+>>>>>>> a98d28ecec46b9758d2c0b64aecd52e92328fa94
