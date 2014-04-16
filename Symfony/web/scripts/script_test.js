@@ -51,3 +51,9 @@ $("#valider").click(function(){
 
 });  
 
+
+function caucher(n){
+for(var i=1; i<5 ;i++){document.getElementById('chek'+i).checked=false };
+document.getElementById('chek'+n).checked=true;  
+
+}

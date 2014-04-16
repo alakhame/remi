@@ -22,7 +22,7 @@ class TestprofController extends Controller
 		if ($request->getMethod() == 'POST') {
 			
 				$em = $this->getDoctrine()->getManager();
-				$question->setIdCours(1);
+				$question->setIdCours($_POST['choix_cours']);
 				$question->setQuestion($_POST['question']);
 				$question->setRep1($_POST['rep1']);
 				$question->setRep2($_POST['rep2']);
