@@ -9,24 +9,19 @@ use FOS\UserBundle\Event\FilterUserResponseEvent;
 use FOS\UserBundle\Event\GetResponseUserEvent;
 use FOS\UserBundle\Model\UserInterface;
 
+use Symfony\Component\HttpFoundation\Response;
+
 class profilController extends Controller
 {
-<<<<<<< HEAD
 	
-    public function indexAction($name)
-    {   
-		$user = $this->container->get('security.context')->getToken()->getUser();
-		if($name=="etudiant"){$tab=array("التقدم","اختبار المستوى","اختبار للمراجعة","الالتحاق بأستاذ","المواد و الدروس","أساتذتي","رسائل");
-        return $this->render('InnovitProfilBundle:profil:profiletudiant.html.twig', array('articles' => $tab, 'user'=>$user));
-=======
+   
     public function indexAction($type,$id)
     {   if($type=="etudiant"){$tab=array("التقدم","اختبار المستوى","اختبار للمراجعة","الالتحاق بأستاذ","المواد و الدروس","أساتذتي","رسائل");
         return $this->render('InnovitProfilBundle:profil:profiletudiant.html.twig', array('articles' => $tab));
->>>>>>> 13a2b92c57f850c3a29fa954d5df6b641249a8a4
 		}
 		if($type=="prof"){   $tab=array("اختبارات","تلامذتي","طلب الإلتحاق","رسائل");
         return $this->render('InnovitProfilBundle:profil:profilprof.html.twig', array('articles' => $tab));
-    }
+		}
     }
 	
 	public function loadAction($page)

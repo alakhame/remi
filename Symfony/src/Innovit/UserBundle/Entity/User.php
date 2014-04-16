@@ -158,13 +158,9 @@ class User extends BaseUser
         parent::__construct();
         // your own logic
 		$this->prenom="";
-<<<<<<< HEAD
 		$this->nom="";
-		$this->dateInsc= new \DateTime;
-=======
 		$this->type="e" ;
 		$this->dateInsc=new \DateTime ;
->>>>>>> 13a2b92c57f850c3a29fa954d5df6b641249a8a4
     }
 	
 	

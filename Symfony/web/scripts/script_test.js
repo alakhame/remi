@@ -59,20 +59,20 @@
 	
 	function getQuestion(id)
 	{
-		var xhr = getXMLHttpRequest();
+		var xhr2 = getXMLHttpRequest();
 	
-	xhr.onreadystatechange = function() {
-		if (xhr.readyState == 4 && (xhr.status == 200 || xhr.status == 0)) {
+	xhr2.onreadystatechange = function() {
+		if (xhr2.readyState == 4 && (xhr2.status == 200 || xhr2.status == 0)) {
 					var q=document.getElementById("question");
 					//var cn=document.createTextNode(xhr.responseXML.getElementsByTagName(question));
 					//q.appendChild(cn) ;
-					console.log(xhr.responseXML.getElementsByTagName('reponse1').innerHTML);
+					console.log(xhr2.responseXML.getElementsByTagName('reponse1').innerHTML);
 					
 		}
 	};
 	
-	xhr.open("GET", "http://127.0.0.1/remi/Symfony/web/app_dev.php/questions/pick/"+id, true);
-	xhr.send(null);
+	xhr2.open("GET", "http://127.0.0.1/remi/Symfony/web/app_dev.php/questions/pick/"+id, true);
+	xhr2.send(null);
 	}
 	
 	
