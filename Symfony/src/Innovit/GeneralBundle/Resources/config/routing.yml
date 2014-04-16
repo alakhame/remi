@@ -3,3 +3,7 @@ innovit_general_homepage:
     defaults: { _controller: InnovitGeneralBundle:General:index }
     requirements:
         name: qsnous|flashactus|Accueil|liensutiles|login
+innovit_redirection:
+    pattern:  /general/redirection
+    defaults: { _controller: InnovitGeneralBundle:General:redirection }
+    

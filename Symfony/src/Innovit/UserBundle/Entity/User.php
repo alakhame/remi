@@ -30,6 +30,14 @@ class User extends BaseUser
      */
 	private $nom;
 
+	/**
+     * @var string
+     *
+     * @ORM\Column(name="typ", type="string", length=255)
+     */
+	private $typ;
+	
+	
     /**
      * @var string
      *
@@ -78,7 +86,28 @@ class User extends BaseUser
     {
         return $this->nom;
     }
+ /**
+     * Set typ
+     *
+     * @param string $typ
+     * @return Utilisateur
+     */
+    public function setType($typ)
+    {
+        $this->typ = $typ;
 
+        return $this;
+    }
+
+    /**
+     * Get nom
+     *
+     * @return string 
+     */
+    public function getType()
+    {
+        return $this->typ;
+    }
     /**
      * Set prenom
      *
@@ -129,6 +158,7 @@ class User extends BaseUser
         parent::__construct();
         $this->nom="";
 		$this->prenom="";
+		$this->type="e" ;
 		$this->dateInsc=new \DateTime ;
     }
 }
