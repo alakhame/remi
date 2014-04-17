@@ -2,11 +2,11 @@
 	
 	var inc=0,k=0, kha=5;
 	
-	function nextQuestion(){
-		  var div1=$("#progression_question");
-		  var div2=$("#progression_question_bar");
-		  var div3=$("#span_num_quest");
-		  var div4=$("#num_question");
+	function nextQuestion(num){
+		  var div1=$("#progression_question_"+num);
+		  var div2=$("#progression_question_bar_"+num);
+		  var div3=$("#span_num_quest_"+num);
+		  var div4=$("#num_question_"+num);
 		div1.animate({top:'-3px'},400);
 		div1.animate({top:'3px'},400);
 		div1.animate({top:'-3px'},400);
@@ -24,7 +24,7 @@
 		div4.html(" "+k);
 		if(k==15)div3.html("إنتهى الإختبار");
 		 for(i=1;i<5;i++){
-		 $("#rep"+i).animate({  borderSpacing: -360 }, {
+		 $("#rep"+i+"_"+num).animate({  borderSpacing: -360 }, {
 			step: function(now,fx) {
 			  $(this).css('-webkit-transform','rotateX('+now+'deg)'); 
 			  $(this).css('-moz-transform','rotateX('+now+'deg)');
@@ -34,7 +34,7 @@
 		},'linear');
 		}
 
-		 $("#img_quest").animate({  borderSpacing: -360 }, {
+		 $("#img_quest_"+num).animate({  borderSpacing: -360 }, {
 			step: function(now,fx) {
 			  $(this).css('-webkit-transform','rotateY('+now+'deg)'); 
 			  $(this).css('-moz-transform','rotateY('+now+'deg)');
@@ -43,7 +43,7 @@
 			duration:'slow'
 		},'linear');
 
-		$("#question").animate({  borderSpacing: -360 }, {
+		$("#question_"+num).animate({  borderSpacing: -360 }, {
 			step: function(now,fx) {
 			  $(this).css('-webkit-transform','rotateX('+now+'deg)'); 
 			  $(this).css('-moz-transform','rotateX('+now+'deg)');
