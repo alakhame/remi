@@ -374,7 +374,7 @@ color:#666666;
 
 .contenu_consl_prof span{text-decoration:underline;color:#FF6600}
 .ligne_separation{height:160px;border-left:1px solid rgb(200,200,200);display:inline-block;margin-top:10px;margin-left:7px}
-#valider:hover{background:#99CC00;color:#FFFFFF;cursor:pointer}
+.valider:hover{background:#99CC00;color:#FFFFFF;cursor:pointer}
 .reponse:hover{background:#CCFFFF}
 .check_rep{display:inline-block;vertical-align:middle}
 .text_rep{display:inline-block;vertical-align:middle;margin-left:10px;max-width:550px}

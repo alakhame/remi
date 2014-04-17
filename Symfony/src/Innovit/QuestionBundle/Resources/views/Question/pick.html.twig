@@ -1,7 +1,8 @@
 
 {% set i=1 %}
 {% for q in qs %}
-	<div class="question_tete_num" id="question_tete_num_{{i}}" style=""><span id="num_question_{{i}}">0</span> السؤال رقم </div>
+	
+	<div id="q_{{i}}"  >
 
 	<div id="img_quest_{{i}}" class="img_quest" style="">
 		<img class="" src="{{asset("images/png/128px/Shape 62.png")}}" style="width:100%"/>
@@ -14,7 +15,7 @@
 		
 	<div id="liste_rep_{{i}}" class="liste_rep" style="position:relative">
 
-		<div id="reponse_tet_{{i}}" class"reponse_tet" style="">الإجابات</div>
+		<div id="reponse_tet_{{i}}" class="reponse_tet" style="">الإجابات</div>
 		
 		<div id="rep1_{{i}}" class="reponse rep1" style="">
 			<div id="" class="text_rep"   style="">{{q.rep1}}</div>
@@ -47,6 +48,8 @@
 	</div> 
 
 	<div id="valider_{{i}}" name="{{i}}" class="valider" style="" onclick="javascript:nextQuestion({{i}})">التالي</div>
+	
+	</div>
 	
 	{% set i=i+1 %}
 {% endfor %}
