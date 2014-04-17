@@ -10,8 +10,5 @@ class DefaultController extends Controller
     {
         return $this->render('InnovitUserBundle:Default:index.html.twig', array('name' => $name));
     }
-	public function getParent()
-  {
-    return 'FOSUserBundle';
-  }
+
 }

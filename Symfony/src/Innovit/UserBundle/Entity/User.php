@@ -29,6 +29,18 @@ class User extends BaseUser
      * @ORM\Column(name="nom", type="string", length=255)
      */
 	private $nom;
+	 /**
+     * @var string
+     *
+     * @ORM\Column(name="niveau", type="string", length=255)
+     */
+	private $niveau;
+ /**
+     * @var integer
+     *
+     * @ORM\Column(name="numNat", type="integer")
+     */
+	private $numNat;
 
 	/**
      * @var string
@@ -44,7 +56,19 @@ class User extends BaseUser
      * @ORM\Column(name="prenom", type="string", length=255)
      */
     private $prenom;
+/**
+     * @var string
+     *
+     * @ORM\Column(name="ecole", type="string", length=255)
+     */
+	private $ecole;
 
+	/**
+     * @var string
+     *
+     * @ORM\Column(name="ville", type="string", length=255)
+     */
+	private $ville;
     /**
      * @var \DateTime
      *
@@ -86,7 +110,95 @@ class User extends BaseUser
     {
         return $this->nom;
     }
- /**
+	 /**
+     * Set niveau
+     *
+     * @param string $nom
+     * @return Utilisateur
+     */
+    public function setNiveau($niveau)
+    {
+        $this->niveau = $niveau;
+
+        return $this;
+    }
+
+    /**
+     * Get niveau
+     *
+     * @return string 
+     */
+    public function getNiveau()
+    {
+        return $this->niveau;
+    }
+	 /**
+     * Set numNat
+     *
+     * @param integer $numNat
+     * @return Utilisateur
+     */
+    public function setNumNat($numNat)
+    {
+        $this->numNat = $numNat;
+
+        return $this;
+    }
+
+    /**
+     * Get numNat
+     *
+     * @return integer 
+     */
+    public function getNumNat()
+    {
+        return $this->numNat;
+    }
+	 /**
+     * Set ecole
+     *
+     * @param string $ecole
+     * @return Utilisateur
+     */
+    public function setEcole($ecole)
+    {
+        $this->ecole = $ecole;
+
+        return $this;
+    }
+
+    /**
+     * Get ecole
+     *
+     * @return string 
+     */
+    public function getecole()
+    {
+        return $this->ecole;
+    }
+	 /**
+     * Set ville
+     *
+     * @param string $ville
+     * @return Utilisateur
+     */
+    public function setVille($ville)
+    {
+        $this->ville = $ville;
+
+        return $this;
+    }
+
+    /**
+     * Get ville
+     *
+     * @return string 
+     */
+    public function getVille()
+    {
+        return $this->ville;
+    }
+	/**
      * Set typ
      *
      * @param string $typ
@@ -158,6 +270,10 @@ class User extends BaseUser
         parent::__construct();
         $this->nom="";
 		$this->prenom="";
+		$this->ecole="";
+		$this->ville="";
+		$this->niveau="";
+		$this->numNat=0;
 		$this->type="e" ;
 		$this->dateInsc=new \DateTime ;
     }
