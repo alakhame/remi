@@ -21,13 +21,13 @@ class User extends BaseUser
      * @ORM\GeneratedValue(strategy="AUTO")
      */
     protected $id;
-
-
-    /**
+	
+	/**
      * @var string
      *
      * @ORM\Column(name="nom", type="string", length=255)
      */
+	 
 	private $nom;
 	 /**
      * @var string
@@ -76,8 +76,8 @@ class User extends BaseUser
      */
     private $dateInsc;
 
-    
 
+	
     /**
      * Get id
      *
@@ -88,6 +88,7 @@ class User extends BaseUser
     {
         return $this->id;
     }
+	
 	 /**
      * Set nom
      *
@@ -268,13 +269,17 @@ class User extends BaseUser
 	public function __construct()
     {
         parent::__construct();
-        $this->nom="";
+        // your own logic
 		$this->prenom="";
 		$this->ecole="";
 		$this->ville="";
 		$this->niveau="";
 		$this->numNat=0;
+		$this->nom="";
 		$this->type="e" ;
 		$this->dateInsc=new \DateTime ;
     }
+	
+	
+	
 }

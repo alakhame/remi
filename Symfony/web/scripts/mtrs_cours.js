@@ -104,6 +104,8 @@ var mat={},triangle={};
 		    mat[num].style.background = "#EFC32F";
 			mat[num].style.transition = "color 0.9s ease  0s";
 		    mat[num].style.color = "white";
+			document.getElementById('cours').style.textAlign = "center"; 
+			
 			
 			if(num!=num_prec){
 			triangle[num_prec].style.transition = "opacity 0.9s ease  0s";

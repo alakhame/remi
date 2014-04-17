@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+=======
+innovit_profil:
+    pattern:  /profil/{type}/{id}
+    defaults: { _controller: InnovitProfilBundle:Profil:index,id:4 }
+    requirements: 
+        type: etudiant|prof	
+>>>>>>> 2ed896caf0df9fd5146c7a1ad69f49946b2add40
 innovit_profil_load:
     pattern:  /profil/special/{page}
     defaults: { _controller: InnovitProfilBundle:Profil:load }

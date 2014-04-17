@@ -1,3 +1,7 @@
+innovit_question:
+    resource: "@InnovitQuestionBundle/Resources/config/routing.yml"
+    prefix:   /
+
 innovit_user:
     resource: "@InnovitUserBundle/Resources/config/routing.yml"
     prefix:   /
