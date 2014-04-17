@@ -57,7 +57,7 @@
 	
 	 
 	
-	function getQuestion(id)
+	/*function getQuestion(id)
 	{
 		var xhr2 = getXMLHttpRequest();
 	
@@ -78,7 +78,7 @@
 	
 	getQuestion(25);
 		
-		var rep1=document.getElementById("rep1_a"); 
+		var rep1=document.getElementById("rep1_a"); */
 		
 		
 	
