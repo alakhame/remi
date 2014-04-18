@@ -374,25 +374,25 @@ color:#666666;
 
 .contenu_consl_prof span{text-decoration:underline;color:#FF6600}
 .ligne_separation{height:160px;border-left:1px solid rgb(200,200,200);display:inline-block;margin-top:10px;margin-left:7px}
-#valider:hover{background:#99CC00;color:#FFFFFF;cursor:pointer}
+.valider:hover{background:#99CC00;color:#FFFFFF;cursor:pointer}
 .reponse:hover{background:#CCFFFF}
 .check_rep{display:inline-block;vertical-align:middle}
 .text_rep{display:inline-block;vertical-align:middle;margin-left:10px;max-width:550px}
 #matrs_rev{margin:auto}
 #test_niv,#test_rev{width:100%;margin:40px auto;}
 #question_tete{width:92%;margin:auto;border-bottom:solid 3px #00CCFF;position:relative;border:solid 1px #BBBBBB}
-#question_tete_num{color:#666666;position:relative;background:white;width:100%;margin:auto;font-size:1.2em;padding:9px 0px;text-align:center;border-bottom:1px solid #AAAAAA;background:rgb(250,250,250)}
-#question{display:inline-block;text-align:center;font-weight:normal;padding:0px 5px;padding-top:10px;vertical-align:top;width:440px;height:120px;margin:13px;margin-top:14px;border:solid 1px rgb(180,180,180);background:rgb(254,254,254);font-size:1.2em}
-#img_quest{display:inline-block;vertical-align:top;margin-top:14px;width:130px;height:130px;border:solid 1px rgb(180,180,180);background:rgb(254,254,254)}
+.question_tete_num{color:#666666;position:relative;background:white;width:100%;margin:auto;font-size:1.2em;padding:9px 0px;text-align:center;border-bottom:1px solid #AAAAAA;background:rgb(250,250,250)}
+.question{display:inline-block;text-align:center;font-weight:normal;padding:0px 5px;padding-top:10px;vertical-align:top;width:440px;height:120px;margin:13px;margin-top:14px;border:solid 1px rgb(180,180,180);background:rgb(254,254,254);font-size:1.2em}
+.img_quest{display:inline-block;vertical-align:top;margin-top:14px;width:130px;height:130px;border:solid 1px rgb(180,180,180);background:rgb(254,254,254)}
 .reponse{width:96%;padding:5px 0px;text-align:center;margin:auto;margin-top:20px;border:solid 1px rgb(180,180,180);background:rgb(254,254,254)}
-#rep1{margin-top:20px}
-#reponse_tet{color:#666666;position:relative;background:white;width:100%;margin:auto;font-size:1.2em;padding:9px 0px;text-align:center;border-bottom:1px solid #AAAAAA;background:rgb(250,250,250)}
-#liste_rep{width:92%;margin:auto;margin-top:40px;border-bottom:solid 3px #00CCFF;;border:solid 1px #BBBBBB}
-#test_bottom{width:90%;margin:auto;margin-top:30px;position:relative}
-#progression_question{width:100%;padding:5px 0px;text-align:center;border:solid 1px rgb(200,200,200);position:relative;overflow:hidden;box-shadow: 0 0  3px #BBB;}
-#progression_question_bar{height:100%;background:#00CCFF;position:absolute;top:0px;right:0px;z-index:0;text-align:center}
-#valider{border-radius:6px;width:20%;padding:5px;margin:auto;margin-top:20px;border:solid 1px rgb(200,200,200);text-align:center}
-#span_num_quest{width:180px;margin:auto;text-align:center;position:relative;z-index:1}
+.rep1{margin-top:20px}
+.reponse_tet{color:#666666;position:relative;background:white;width:100%;margin:auto;font-size:1.2em;padding:9px 0px;text-align:center;border-bottom:1px solid #AAAAAA;background:rgb(250,250,250)}
+.liste_rep{width:92%;margin:auto;margin-top:40px;border-bottom:solid 3px #00CCFF;;border:solid 1px #BBBBBB}
+.test_bottom{width:90%;margin:auto;margin-top:30px;position:relative}
+.progression_question{width:100%;padding:5px 0px;text-align:center;border:solid 1px rgb(200,200,200);position:relative;overflow:hidden;box-shadow: 0 0  3px #BBB;}
+.progression_question_bar{height:100%;background:#00CCFF;position:absolute;top:0px;right:0px;z-index:0;text-align:center}
+.valider{border-radius:6px;width:20%;padding:5px;margin:auto;margin-top:20px;border:solid 1px rgb(200,200,200);text-align:center}
+.span_num_quest{width:180px;margin:auto;text-align:center;position:relative;z-index:1}
 #titre_mes_info{width:150px;margin-left:30px;display:inline-block;vertical-align:top}
 #modif_mes_info{position:absolute;left:20px;display:inline-block;vertical-align:top;color:rgb(100,100,100);border-radius:5px;padding:0px 5px;border:solid 1px rgb(200,200,200);}
 #modif_mes_info:hover{background:rgb(250,250,250);cursor:pointer}

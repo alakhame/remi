@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> 3de951e1275ccc509348d80d552e281ecb22637e
 innovit_profil_load:
     pattern:  /profil/special/{page}
     defaults: { _controller: InnovitProfilBundle:Profil:load }
@@ -6,7 +10,10 @@ innovit_profil:
     defaults: { _controller: InnovitProfilBundle:Profil:index,id:4 }
     requirements: 
         type: etudiant|prof	
+<<<<<<< HEAD
 
+=======
+>>>>>>> 3de951e1275ccc509348d80d552e281ecb22637e
 innovit_profil:
     pattern:  /profil/{type}/{id}
     defaults: { _controller: InnovitProfilBundle:Profil:index,id:4 }	
