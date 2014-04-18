@@ -21,6 +21,7 @@
       <parameter key="InnovitGeneralBundle">Innovit\GeneralBundle\InnovitGeneralBundle</parameter>
       <parameter key="InnovitProfilBundle">Innovit\ProfilBundle\InnovitProfilBundle</parameter>
       <parameter key="InnovitUserBundle">Innovit\UserBundle\InnovitUserBundle</parameter>
+      <parameter key="InnovitQuestionBundle">Innovit\QuestionBundle\InnovitQuestionBundle</parameter>
       <parameter key="AcmeDemoBundle">Acme\DemoBundle\AcmeDemoBundle</parameter>
       <parameter key="WebProfilerBundle">Symfony\Bundle\WebProfilerBundle\WebProfilerBundle</parameter>
       <parameter key="SensioDistributionBundle">Sensio\Bundle\DistributionBundle\SensioDistributionBundle</parameter>
@@ -340,6 +341,12 @@
     <parameter key="security.access.always_authenticate_before_granting">false</parameter>
     <parameter key="security.authentication.hide_user_not_found">true</parameter>
     <parameter key="security.role_hierarchy.roles" type="collection">
+      <parameter key="ROLE_ETUDIANT" type="collection">
+        <parameter>ROLE_USER</parameter>
+      </parameter>
+      <parameter key="ROLE_PROF" type="collection">
+        <parameter>ROLE_PROF</parameter>
+      </parameter>
       <parameter key="ROLE_ADMIN" type="collection">
         <parameter>ROLE_USER</parameter>
       </parameter>
@@ -2010,6 +2017,12 @@
         <argument>fr</argument>
         <argument>messages</argument>
       </call>
+      <call method="addResource">
+        <argument>xlf</argument>
+        <argument>C:\wamp\www\remi\Symfony\src\Innovit\QuestionBundle/Resources/translations\messages.fr.xlf</argument>
+        <argument>fr</argument>
+        <argument>messages</argument>
+      </call>
     </service>
     <service id="translation.loader.php" class="Symfony\Component\Translation\Loader\PhpFileLoader">
       <tag name="translation.loader" alias="php"/>
@@ -2949,7 +2962,7 @@
         </argument>
         <argument type="service">
           <service class="Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider" public="false">
-            <argument>534c00bb889cb</argument>
+            <argument>535064c24d84c</argument>
           </service>
         </argument>
       </argument>
@@ -2997,6 +3010,12 @@
     </service>
     <service id="security.role_hierarchy" class="Symfony\Component\Security\Core\Role\RoleHierarchy" public="false">
       <argument type="collection">
+        <argument key="ROLE_ETUDIANT" type="collection">
+          <argument>ROLE_USER</argument>
+        </argument>
+        <argument key="ROLE_PROF" type="collection">
+          <argument>ROLE_PROF</argument>
+        </argument>
         <argument key="ROLE_ADMIN" type="collection">
           <argument>ROLE_USER</argument>
         </argument>
@@ -3090,11 +3109,11 @@
                 <call method="add">
                   <argument type="service">
                     <service class="Symfony\Component\HttpFoundation\RequestMatcher" public="false">
-                      <argument>^/admin/</argument>
+                      <argument>^/profil/</argument>
                     </service>
                   </argument>
                   <argument type="collection">
-                    <argument>ROLE_ADMIN</argument>
+                    <argument>ROLE_USER</argument>
                   </argument>
                   <argument>null</argument>
                 </call>
@@ -3137,7 +3156,7 @@
                     <argument type="service" id="router" on-invalid="null"/>
                   </service>
                 </argument>
-                <argument>/</argument>
+                <argument>/general/Accueil</argument>
               </service>
             </argument>
             <argument type="collection">
@@ -3174,11 +3193,11 @@
                   </service>
                 </argument>
                 <argument type="collection">
-                  <argument key="always_use_default_target_path">false</argument>
-                  <argument key="default_target_path">/</argument>
+                  <argument key="always_use_default_target_path">true</argument>
+                  <argument key="default_target_path">/general/redirection</argument>
+                  <argument key="use_referer">true</argument>
                   <argument key="login_path">/login</argument>
                   <argument key="target_path_parameter">_target_path</argument>
-                  <argument key="use_referer">false</argument>
                 </argument>
                 <call method="setProviderKey">
                   <argument>main</argument>
@@ -3221,7 +3240,7 @@
         <argument type="service">
           <service class="Symfony\Component\Security\Http\Firewall\AnonymousAuthenticationListener" public="false">
             <argument type="service" id="security.context"/>
-            <argument>534c00bb889cb</argument>
+            <argument>535064c24d84c</argument>
             <argument type="service" id="monolog.logger.security" on-invalid="null"/>
           </service>
         </argument>
@@ -3268,11 +3287,11 @@
                 <call method="add">
                   <argument type="service">
                     <service class="Symfony\Component\HttpFoundation\RequestMatcher" public="false">
-                      <argument>^/admin/</argument>
+                      <argument>^/profil/</argument>
                     </service>
                   </argument>
                   <argument type="collection">
-                    <argument>ROLE_ADMIN</argument>
+                    <argument>ROLE_USER</argument>
                   </argument>
                   <argument>null</argument>
                 </call>
@@ -4191,6 +4210,10 @@
       <call method="addPath">
         <argument>C:\wamp\www\remi\Symfony\src\Innovit\UserBundle/Resources/views</argument>
         <argument>InnovitUser</argument>
+      </call>
+      <call method="addPath">
+        <argument>C:\wamp\www\remi\Symfony\src\Innovit\QuestionBundle/Resources/views</argument>
+        <argument>InnovitQuestion</argument>
       </call>
       <call method="addPath">
         <argument>C:\wamp\www\remi\Symfony\src\Acme\DemoBundle/Resources/views</argument>

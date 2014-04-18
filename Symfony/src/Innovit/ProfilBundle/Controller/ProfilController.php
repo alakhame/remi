@@ -19,13 +19,14 @@ class profilController extends Controller
 	
    
     public function indexAction($type,$id)
-    {   if($this->container->get('security.context')->getToken()->getUser()->getId()!=$id || $this->container->get('security.context')->getToken()->getUser()->getType()!=$type)
+    {   $user=$this->container->get('security.context')->getToken()->getUser();
+		if($user->getId()!=$id || $user->getType()!=$type)
 	    throw new AccessDeniedHttpException('Vous n êtes pas sur votre profil');
 		if($type=="etudiant"){$tab=array("التقدم","اختبار المستوى","اختبار للمراجعة","الالتحاق بأستاذ","المواد و الدروس","أساتذتي","رسائل");
-        return $this->render('InnovitProfilBundle:profil:profiletudiant.html.twig', array('articles' => $tab));
+        return $this->render('InnovitProfilBundle:profil:profiletudiant.html.twig', array('articles' => $tab,'user'=>$user));
 		}
 		if($type=="prof"){   $tab=array("اختبارات","تلامذتي","طلب الإلتحاق","رسائل");
-        return $this->render('InnovitProfilBundle:profil:profilprof.html.twig', array('articles' => $tab));
+        return $this->render('InnovitProfilBundle:profil:profilprof.html.twig', array('articles' => $tab,'user'=>$user));
 		}
     }
 	

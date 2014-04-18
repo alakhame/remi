@@ -54,13 +54,19 @@ class __TwigTemplate_8ff2bc2e35f47b76b26b3341941782f6cfe7a57735765950135c11364ba
 <div id=\"barreuser\" style=\"\">
 \t<div  style=\"width:960px;padding-top:6px;padding-bottom:6px;position:relative;margin:auto\">
 \t\t<div id=\"barreuser_3\"  class=\"barreuseri\" style=\"\" >--  حساب التلميذ  --</div>
-\t\t<div id=\"barreuser_2\"  class=\"barreuseri\" style=\"\" >رباطي</div>
-\t\t<div id=\"barreuser_1\" class=\"barreuseri\" style=\"margin-right:75px\" > كريم</div>
+\t\t<div id=\"barreuser_2\"  class=\"barreuseri\" style=\"\" >";
+        // line 32
+        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["user"]) ? $context["user"] : null), "prenom"), "html", null, true);
+        echo "</div>
+\t\t<div id=\"barreuser_1\" class=\"barreuseri\" style=\"margin-right:75px\" > ";
+        // line 33
+        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["user"]) ? $context["user"] : null), "nom"), "html", null, true);
+        echo "</div>
 \t\t<div id=\"img_user\" style=\"\"><img id=\"\" src=\"";
         // line 34
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("images/user_icon.png"), "html", null, true);
         echo "\" style=\"width:100%\"/></div>
-\t\t<div id=\"deconnexion\" style=\"\"  >تسجيل الخروج</div>
+\t\t<div id=\"deconnexion\"   >تسجيل الخروج</div>
 \t</div>\t
 </div>
 
@@ -125,6 +131,6 @@ class __TwigTemplate_8ff2bc2e35f47b76b26b3341941782f6cfe7a57735765950135c11364ba
 
     public function getDebugInfo()
     {
-        return array (  112 => 44,  109 => 43,  101 => 64,  87 => 53,  81 => 50,  75 => 46,  73 => 43,  61 => 34,  45 => 21,  20 => 1,  176 => 99,  151 => 77,  139 => 68,  128 => 60,  116 => 50,  105 => 47,  97 => 44,  90 => 42,  86 => 41,  79 => 40,  76 => 39,  71 => 38,  69 => 37,  31 => 3,  28 => 7,);
+        return array (  118 => 44,  115 => 43,  107 => 64,  93 => 53,  87 => 50,  81 => 46,  79 => 43,  67 => 34,  63 => 33,  59 => 32,  45 => 21,  28 => 7,  20 => 1,);
     }
 }

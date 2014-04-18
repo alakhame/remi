@@ -135,20 +135,25 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
 
         }
 
+        // innovit_question_pick10
+        if (0 === strpos($pathinfo, '/questions/pick') && preg_match('#^/questions/pick/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+            return $this->mergeDefaults(array_replace($matches, array('_route' => 'innovit_question_pick10')), array (  '_controller' => 'Innovit\\QuestionBundle\\Controller\\QuestionController::pickAction',));
+        }
+
         // innovit_user_homepage
         if (0 === strpos($pathinfo, '/hello') && preg_match('#^/hello/(?P<name>[^/]++)$#s', $pathinfo, $matches)) {
             return $this->mergeDefaults(array_replace($matches, array('_route' => 'innovit_user_homepage')), array (  '_controller' => 'Innovit\\UserBundle\\Controller\\DefaultController::indexAction',));
         }
 
         if (0 === strpos($pathinfo, '/profil')) {
-            // innovit_profil_etudiant
-            if (preg_match('#^/profil/(?P<name>[^/]++)$#s', $pathinfo, $matches)) {
-                return $this->mergeDefaults(array_replace($matches, array('_route' => 'innovit_profil_etudiant')), array (  '_controller' => 'Innovit\\ProfilBundle\\Controller\\ProfilController::indexAction',));
-            }
-
             // innovit_profil_load
             if (0 === strpos($pathinfo, '/profil/special') && preg_match('#^/profil/special/(?P<page>[^/]++)$#s', $pathinfo, $matches)) {
                 return $this->mergeDefaults(array_replace($matches, array('_route' => 'innovit_profil_load')), array (  '_controller' => 'Innovit\\ProfilBundle\\Controller\\ProfilController::loadAction',));
+            }
+
+            // innovit_profil
+            if (preg_match('#^/profil/(?P<type>[^/]++)(?:/(?P<id>[^/]++))?$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'innovit_profil')), array (  '_controller' => 'Innovit\\ProfilBundle\\Controller\\ProfilController::indexAction',  'id' => 4,));
             }
 
         }
@@ -168,9 +173,27 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
             return array (  '_controller' => 'InnovitProfilBundle:Test:bla',  '_route' => 'test',);
         }
 
-        // innovit_general_homepage
-        if (0 === strpos($pathinfo, '/general') && preg_match('#^/general/(?P<name>qsnous|flashactus|Accueil|liensutiles)$#s', $pathinfo, $matches)) {
-            return $this->mergeDefaults(array_replace($matches, array('_route' => 'innovit_general_homepage')), array (  '_controller' => 'Innovit\\GeneralBundle\\Controller\\GeneralController::indexAction',));
+        // test_prof
+        if ($pathinfo === '/sendquest') {
+            return array (  '_controller' => 'Innovit\\ProfilBundle\\Controller\\TestprofController::sendquestAction',  '_route' => 'test_prof',);
+        }
+
+        // test_modif_prof
+        if ($pathinfo === '/modifquest') {
+            return array (  '_controller' => 'Innovit\\ProfilBundle\\Controller\\TestprofController::modifierquestAction',  '_route' => 'test_modif_prof',);
+        }
+
+        if (0 === strpos($pathinfo, '/general')) {
+            // innovit_general_homepage
+            if (preg_match('#^/general/(?P<name>qsnous|flashactus|Accueil|liensutiles|login)$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'innovit_general_homepage')), array (  '_controller' => 'Innovit\\GeneralBundle\\Controller\\GeneralController::indexAction',));
+            }
+
+            // innovit_redirection
+            if ($pathinfo === '/general/redirection') {
+                return array (  '_controller' => 'Innovit\\GeneralBundle\\Controller\\GeneralController::redirectionAction',  '_route' => 'innovit_redirection',);
+            }
+
         }
 
         // HelloTheWorld

@@ -15,8 +15,9 @@ class __TwigTemplate_d46436d62472930e42d15db5d5a3df1a4e97ffefc4086b2fd2ed36641ba
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        // line 2
+        // line 1
         echo "
+
 <form action=\"";
         // line 3
         echo $this->env->getExtension('routing')->getPath("fos_user_registration_register");
@@ -27,12 +28,11 @@ class __TwigTemplate_d46436d62472930e42d15db5d5a3df1a4e97ffefc4086b2fd2ed36641ba
         // line 4
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock((isset($context["form"]) ? $context["form"] : null), 'widget');
         echo "
-    <div>
-        <input type=\"submit\" value=\"";
-        // line 6
-        echo twig_escape_filter($this->env, $this->env->getExtension('translator')->trans("registration.submit", array(), "FOSUserBundle"), "html", null, true);
-        echo "\" />
+\t\t
+    <div style=\"width:100px;margin:auto;margin-top:15px\">
+        <input type=\"submit\" value=\"register\" />
     </div>
+\t
 </form>
 ";
     }
@@ -49,6 +49,6 @@ class __TwigTemplate_d46436d62472930e42d15db5d5a3df1a4e97ffefc4086b2fd2ed36641ba
 
     public function getDebugInfo()
     {
-        return array (  48 => 12,  42 => 9,  39 => 7,  30 => 2,  26 => 12,  24 => 7,  50 => 10,  41 => 9,  38 => 8,  27 => 4,  23 => 4,  33 => 6,  22 => 3,  19 => 2,  103 => 28,  100 => 27,  93 => 29,  91 => 27,  87 => 25,  81 => 24,  72 => 21,  67 => 20,  62 => 19,  58 => 18,  54 => 16,  46 => 14,  40 => 11,  36 => 7,  29 => 5,  20 => 1,  31 => 4,  28 => 4,);
+        return array (  23 => 3,  19 => 1,  103 => 28,  93 => 29,  91 => 27,  87 => 25,  72 => 21,  62 => 19,  58 => 18,  54 => 16,  46 => 14,  40 => 11,  36 => 10,  139 => 54,  136 => 53,  128 => 74,  108 => 60,  102 => 56,  100 => 27,  84 => 42,  79 => 40,  75 => 39,  70 => 37,  65 => 35,  43 => 19,  20 => 1,  76 => 5,  73 => 4,  61 => 26,  53 => 21,  37 => 7,  35 => 4,  32 => 3,  29 => 4,  127 => 76,  114 => 63,  104 => 59,  94 => 52,  81 => 24,  74 => 38,  67 => 20,  60 => 33,  31 => 9,  28 => 3,);
     }
 }

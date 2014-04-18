@@ -35,41 +35,37 @@ class __TwigTemplate_95aa7ff32d15c1b670698694a9f1809a15b46102acf8fa6b0309a204e0a
         $this->displayBlock('milieu', $context, $blocks);
         // line 7
         echo "\t\t\t<div id=\"inscription\" class=\"\" style=\"\">
+
+\t\t\t\t
 \t\t\t\t<div id=\"video\" style=\"\">
 \t\t\t\t   <iframe width=\"100%\" height=\"220\" src=\"//www.youtube.com/embed/Yim4--J44gk?rel=0\" frameborder=\"0\" allowfullscreen></iframe>
 \t\t\t\t</div>\t
 \t\t\t\t
+
+\t\t\t\t\t\t\t\t
 \t\t\t\t<div id=\"insc\" class=\"\" style=\"\">
 \t\t\t\t\t<div id=\"insc_titre1\" style=\"\">مرحبا بك,املك حسابك الخاص الآن</div>
 \t\t\t\t\t<div id=\"insc_titre2\" style=\"\">التسجيل</div>\t\t  
 \t\t\t
 \t\t\t\t<div id=\"inputs\" class=\"\" style=\"opacity:1\">
-\t\t\t\t\t<form action=\"\" method=\"post\" >
-\t\t\t\t\t<input class=\"input_inscription\" style=\"\"  placeholder=\"الإسم الشخصي\" type=\"text\" ></input></br> 
-\t\t\t\t\t<input class=\"input_inscription\" style=\"\"  placeholder=\"الإسم العائلي\" type=\"text\" ></input></br> 
-\t\t\t\t\t<input class=\"input_inscription\" style=\"\"  placeholder=\"كلمة السر\" type=\"password\" ></input></br>
-\t\t\t\t\t<input class=\"input_inscription\" style=\"\"  placeholder=\"تأكيد كلمة السر\" type=\"password\" ></input></br>
-\t\t\t\t\t<input class=\"input_inscription\" style=\"\"  placeholder=\"مدرستك\" type=\"text\" ></input></br> 
-\t\t\t\t\t<input class=\"input_inscription\" style=\"\"  placeholder=\"مدينتك\" type=\"text\" ></input></br>  
-\t\t\t\t\t<input class=\"input_inscription\" style=\"\"  placeholder=\"بريدك ألإلكتروني\" type=\"text\" ></input></br>  
-\t\t\t\t\t<input type=\"radio\" name=\"frites\" value=\"oui\" id=\"case1\" checked=\"checked\" /> <label for=\"oui\">تلميذ</label>
-\t\t\t\t\t<input type=\"radio\" name=\"frites\" value=\"non\" id=\"case2\" /> <label for=\"non\">أستاذ</label><br>
-\t\t\t\t\t<input class=\"input_inscription\" style=\"\"  placeholder=\"الرقم الوطني/رقم التأجير\" type=\"text\" ></input></br> 
-\t\t\t\t\t\t<select  id=\"choix_niveau\" name=\"choix\">
-\t\t\t\t\t\t\t<option value=\"choix1\">السادس إبتدائي</option>
-\t\t\t\t\t\t</select>
-\t\t\t\t\t<label id=\"label_choix_niveau\">المستوى</label> 
-\t\t\t\t\t<div id=\"btn_insc\" style=\"\">
-\t\t\t\t\t\t<input  style=\"\" value=\"Inscription\"  placeholder=\"تسجيل\" type=\"submit\" ></input>
-\t\t\t\t\t</div>
-\t\t\t\t\t
-\t\t\t\t\t</form>
+\t\t\t\t ";
+        // line 21
+        echo $this->env->getExtension('http_kernel')->renderFragment($this->env->getExtension('http_kernel')->controller("FOSUserBundle:Registration:register"));
+        echo "
 \t\t\t\t</div>
+\t\t
 \t\t\t\t</div>
-\t\t\t\t
+\t\t\t\t<div id=\"video\" style=\"\">
+\t\t\t\t<img class=\"\" src=\"";
+        // line 26
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("images/video.png"), "html", null, true);
+        echo "\" style=\"\"/>
+\t\t\t\t</div>\t
 \t\t\t\t
 \t\t\t</div>\t
 \t\t</div>
+\t\t
+\t
 ";
     }
 
@@ -93,6 +89,6 @@ class __TwigTemplate_95aa7ff32d15c1b670698694a9f1809a15b46102acf8fa6b0309a204e0a
 
     public function getDebugInfo()
     {
-        return array (  80 => 5,  77 => 4,  37 => 7,  35 => 4,  32 => 3,  29 => 2,  127 => 76,  114 => 66,  104 => 59,  94 => 52,  81 => 42,  74 => 38,  67 => 34,  60 => 30,  31 => 3,  28 => 2,);
+        return array (  76 => 5,  73 => 4,  61 => 26,  53 => 21,  37 => 7,  35 => 4,  32 => 3,  29 => 2,  127 => 76,  114 => 66,  104 => 59,  94 => 52,  81 => 42,  74 => 38,  67 => 34,  60 => 30,  31 => 3,  28 => 2,);
     }
 }
