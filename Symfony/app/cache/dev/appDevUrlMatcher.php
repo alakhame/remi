@@ -183,10 +183,15 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
             return array (  '_controller' => 'Innovit\\ProfilBundle\\Controller\\TestprofController::modifierquestAction',  '_route' => 'test_modif_prof',);
         }
 
+        // innovit_homepage
+        if ($pathinfo === '/Accueil') {
+            return array (  '_controller' => 'Innovit\\GeneralBundle\\Controller\\GeneralController::AcceuilAction',  '_route' => 'innovit_homepage',);
+        }
+
         if (0 === strpos($pathinfo, '/general')) {
-            // innovit_general_homepage
-            if (preg_match('#^/general/(?P<name>qsnous|flashactus|Accueil|liensutiles|login)$#s', $pathinfo, $matches)) {
-                return $this->mergeDefaults(array_replace($matches, array('_route' => 'innovit_general_homepage')), array (  '_controller' => 'Innovit\\GeneralBundle\\Controller\\GeneralController::indexAction',));
+            // innovit_general_load
+            if (0 === strpos($pathinfo, '/general/special') && preg_match('#^/general/special/(?P<page>[^/]++)$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'innovit_general_load')), array (  '_controller' => 'Innovit\\GeneralBundle\\Controller\\GeneralController::loadAction',));
             }
 
             // innovit_redirection

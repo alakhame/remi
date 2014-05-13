@@ -8,200 +8,57 @@
 				element.attachEvent('on'+event,fun);
 			}
 		}
-var sliderimages={},clicabletext ={},fleche ={},j,n=1;
-		
-		clicabletext[0] = document.getElementById('clicable1_text');  
-		clicabletext[1] = document.getElementById('clicable2_text');
-		clicabletext[2] = document.getElementById('clicable3_text');
-		clicabletext[3] = document.getElementById('clicable4_text');
-			
-		fleche[0] = document.getElementById('div1');  
-		fleche[1] = document.getElementById('div2');
-		fleche[2] = document.getElementById('div3');
-		fleche[3] = document.getElementById('div4');	
-		
-		
-		sliderimages[0] = document.getElementById('sls1');  
-		sliderimages[1] = document.getElementById('sls2');
-		sliderimages[2] = document.getElementById('sls3');
-		sliderimages[3] = document.getElementById('sls4');
-		
-		
-     	
-			
-			image_pré=0;
-			
-			
-		afficherimage = function(e){
-		  
-	
-	
-	if(e.target ==fleche[0] )
-	 {
-	 
-	 
-	 
-	 for(j=0;j<4;j++){	                  fleche[j].style.opacity="0.5";
-					  }
-	 
-	 
-	   
-	   fleche[0].style.opacity="1";
-	   n=0;
-	   
-	    sliderimages[image_pré].style.transition = "opacity 1.5s ease  0s";
-		sliderimages[image_pré].style.opacity = "0";  
-		
-	    sliderimages[0].style.transition = "opacity 1.5s ease 0s";
-		sliderimages[0].style.opacity = "1";  
-        
-		
-		image_pré=0;
 
-	 }
-	 
-	else if(e.target ==fleche[1]  )
-	 {
-	 for(j=0;j<4;j++){
-	                  fleche[j].style.opacity="0.5";
- 				      }
-	 
-	   fleche[1].style.opacity="1";
-	   n=1;
-	   sliderimages[image_pré].style.transition = "opacity 1.5s ease  0s";
-		sliderimages[image_pré].style.opacity = "0";  
-		
-	    sliderimages[1].style.transition = "opacity 1.5s ease  0s";
-		sliderimages[1].style.opacity = "1";  
-        
-		image_pré=1;}
-	else if(e.target ==fleche[2] )
-	 {
-	 for(j=0;j<4;j++){
-	                  fleche[j].style.opacity="0.5";
-					  					  }
-	 
-	 
-	   
-	   fleche[2].style.opacity="1";
-	   n=2;
-	  sliderimages[image_pré].style.transition = "opacity 1.5s ease  0s";
-		sliderimages[image_pré].style.opacity = "0";  
-		
-	    sliderimages[2].style.transition = "opacity 1.5s ease  0s";
-		sliderimages[2].style.opacity = "1";  
-        
-		image_pré=2;
-	  }
-		
-	else if(e.target ==fleche[3] )
-	 {
-	 for(j=0;j<4;j++){
-	                  fleche[j].style.opacity="0.5";
-					  }
-	 
-	 
-	   
-	   fleche[3].style.opacity="1";
-	   n=3;
-	   sliderimages[image_pré].style.transition = "opacity 1.5s ease  0s";
-		sliderimages[image_pré].style.opacity = "0";  
-		
-	    sliderimages[3].style.transition = "opacity 1.5s ease  0s";
-		sliderimages[3].style.opacity = "1";  
-        
-		image_pré=3;}
-	
-	}		
-    
-	for(j=0;j<4;j++){
-					
-			addEvent('click',fleche[j],afficherimage);
-			
-			}
-			
-		
-	
-	
-	 
+$(document).ready(function (){ 
+                    $('html, body').animate({
+                        scrollTop: 0
+                    }, 900);
+					aff_opac(1);
+                            });
 
+function aff_opac(n){
+document.getElementById('menu_vol').style.transition="right 0.6s ease  0s"; 
+document.getElementById('menu_vol').style.right=(n-1)*157+17+"px"; 
+} 
 
+function aff_liens(){
+document.getElementById('div_liens').style.transition = "right 1.3s ease  0s"; 
+document.getElementById('div_liens').style.right="0%";
+document.getElementById('div_qsnous').style.transition = "right 1.3s ease  0s"; 
+document.getElementById('div_qsnous').style.right="100%";
+document.getElementById('div_actus').style.transition = "right 1.3s ease  0s"; 
+document.getElementById('div_actus').style.right="200%";
+for(var i=1;i<4;i++){document.getElementById('cercle'+i).style.opacity="0.5";}
+document.getElementById('cercle'+3).style.opacity="1";
+} 
+ 
+function aff_actus(){
+document.getElementById('div_liens').style.transition = "right 1.3s ease  0s"; 
+document.getElementById('div_liens').style.right="-200%";
+document.getElementById('div_qsnous').style.transition = "right 1.3s ease  0s"; 
+document.getElementById('div_qsnous').style.right="-100%";
+document.getElementById('div_actus').style.transition = "right 1.3s ease  0s"; 
+document.getElementById('div_actus').style.right="0%";
+for(var i=1;i<4;i++){document.getElementById('cercle'+i).style.opacity="0.5";}
+document.getElementById('cercle'+1).style.opacity="1";
+} 
+ 
+ 
+function aff_qsnous(){
+document.getElementById('div_liens').style.transition = "right 1.3s ease  0s"; 
+document.getElementById('div_liens').style.right="-100%";
+document.getElementById('div_qsnous').style.transition = "right 1.3s ease  0s"; 
+document.getElementById('div_qsnous').style.right="0%";
+document.getElementById('div_actus').style.transition = "right 1.3s ease  0s"; 
+document.getElementById('div_actus').style.right="100%";
+for(var i=1;i<4;i++){document.getElementById('cercle'+i).style.opacity="0.5";}
+document.getElementById('cercle'+2).style.opacity="1";
 
-	 setInterval(function(){ 
-	
-		if(n==0)
-	 {
-	 for(j=0;j<4;j++){
-	                  fleche[j].style.opacity="0.5";
-                     }
-
-	   fleche[0].style.opacity="1";
-	    
-		sliderimages[image_pré].style.transition = "opacity 1.5s ease  0s";
-		sliderimages[image_pré].style.opacity = "0";  
-		
-	    sliderimages[n].style.transition = "opacity 1.5s ease  0s";
-		sliderimages[n].style.opacity = "1";  
-        
-		image_pré=n;}
-	 
-	else if(n==1)
-	 {
-	 for(j=0;j<4;j++){
-	                  fleche[j].style.opacity="0.5";
-					  }
-
-	   fleche[1].style.opacity="1";
-	   
-	   sliderimages[image_pré].style.transition = "opacity 1.5s ease  0s";
-		sliderimages[image_pré].style.opacity = "0";  
-		
-	    sliderimages[n].style.transition = "opacity 1.5s ease  0s";
-		sliderimages[n].style.opacity = "1";  
-        
-		image_pré=n;
-		}
-	else if(n==2)
-	 {
-	 for(j=0;j<4;j++){
-	                  fleche[j].style.opacity="0.5";
-					  }
-	 
-
-	   fleche[2].style.opacity="1";
-	   sliderimages[image_pré].style.transition = "opacity 1.5s ease  0s";
-		sliderimages[image_pré].style.opacity = "0";  
-		
-	    sliderimages[n].style.transition = "opacity 1.5s ease  0s";
-		sliderimages[n].style.opacity = "1";  
-        
-		image_pré=n;
-		}
-	else if(n==3)
-	 {
-	 for(j=0;j<4;j++){
-	                  fleche[j].style.opacity="0.5";
-					 }
-
-	   fleche[3].style.opacity="1";
-	  sliderimages[image_pré].style.transition = "opacity 1.5s ease  0s";
-		sliderimages[image_pré].style.opacity = "0";  
-		
-	    sliderimages[n].style.transition = "opacity 1.5s ease  0s";
-		sliderimages[n].style.opacity = "1";  
-        
-		image_pré=n;
-		}
-	
-		n++;
-		if(n==4) n=0;
-	
-}		
-			
-   , 7000);
-   
-   
-   
+} 
+ 
+function aff_scd_play(){document.getElementById('logo_image').src="/remi/Symfony/web/images/play.png";}
+function aff_scd_logo(){document.getElementById('logo_image').src="/remi/Symfony/web/images/logo.png";}
+ 
    function getScrollPosition()
 {
 	return Array((document.documentElement && document.documentElement.scrollLeft) || window.pageXOffset || self.pageXOffset || document.body.scrollLeft,(document.documentElement && document.documentElement.scrollTop) || window.pageYOffset || self.pageYOffset || document.body.scrollTop);
@@ -209,23 +66,94 @@ var sliderimages={},clicabletext ={},fleche ={},j,n=1;
 
 function scroll()
 {
-if(getScrollPosition()[1]>=316){
-document.getElementById('Entete_general').style.position="fixed";
-document.getElementById('Entete_general').style.top="-316px";
-document.getElementById('menu').style.boxShadow="0 0 5px #000"
+document.getElementById('box_g').style.opacity= (1-getScrollPosition()[1]/300)+""; 
 }
 
-else{
 
-document.getElementById('Entete_general').style.position="absolute";
-document.getElementById('Entete_general').style.top="0px";
-document.getElementById('menu').style.boxShadow=""
-}
-
-}
 
 function aff_barre(n){	 for(j=1;j<=4;j++){document.getElementById('menu_'+j).style.background="black"}
 document.getElementById('menu_'+n).style.background="#94CE9B";
 }
 
 
+  $(document).ready(function (){
+            $("#inscription_bnt").click(function (){
+                //$(this).animate(function(){
+                    $('html, body').animate({
+                        scrollTop: $("#inscription").offset().top  - 58
+                    }, 900);
+					
+                //});
+            });
+			
+			$("#menu_a_1").click(function (){
+                //$(this).animate(function(){
+                    $('html, body').animate({
+                        scrollTop: 0
+                    }, 900);
+                //});
+            });
+
+            $("#menu_a_2").click(function (){
+                //$(this).animate(function(){
+                    $('html, body').animate({
+                        scrollTop: $("#div_qsnou_liens_actus").offset().top  - 58
+                    }, 900);
+				
+                //});
+            });
+ 
+            $("#menu_a_3").click(function (){
+                //$(this).animate(function(){
+                    $('html, body').animate({
+                        scrollTop: $("#div_qsnou_liens_actus").offset().top  - 58
+                    }, 900);
+                //});
+            });
+			
+
+            $("#menu_a_4").click(function (){
+                //$(this).animate(function(){
+                    $('html, body').animate({
+                        scrollTop: $("#div_qsnou_liens_actus").offset().top  - 58
+                    }, 900);
+                //});
+            });
+			
+			$("#menu_a_5").click(function (){
+                //$(this).animate(function(){
+                    $('html, body').animate({
+                        scrollTop: $("#footer_g").offset().top  - 58
+                    }, 900);
+                //});
+            });
+	
+			 $("#logo_image").click(function (){
+                //$(this).animate(function(){
+				$("#acc_desous").show("slow");
+                               });
+
+			 $("#video_tab_ret").click(function (){
+                //$(this).animate(function(){
+				$("#acc_desous").hide("slow");
+                    
+            });
+			
+            $("#scroll_haut_div").click(function (){
+                //$(this).animate(function(){
+                    $('html, body').animate({
+                        scrollTop: 0
+                    }, 900);
+					aff_opac(1);
+                //});
+            });
+			 $("#sing_in").click(function (){
+                //$(this).animate(function(){
+                    $('html, body').animate({
+                        scrollTop: 0
+                    }, 900);
+                //});
+            });			});	
+			
+
+			

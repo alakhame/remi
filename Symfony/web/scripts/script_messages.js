@@ -80,4 +80,18 @@ document.getElementById('masquer_recu'+i).style.display="none";
 document.getElementById('afficher_recu'+i).style.display="inline-block";
 }
 
+function effacer_env(n){
+document.getElementById('message_envoyer'+n).style.transition = "height 0.4s ease  0s"; 
+document.getElementById('message_envoyer'+n).style.height="0px";
+}
+
+function effacer_rec(n){
+document.getElementById('message_recu'+n).style.transition = "height 0.4s ease  0s"; 
+document.getElementById('message_recu'+n).style.height="0px";
+
+setTimeout(function(){document.getElementById('message_recu'+n).style.display="none";},400)}
+
+
+
+
 

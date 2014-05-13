@@ -6,7 +6,7 @@
 	<div id="afficher_envoyer{{i}}" class="btn_affich_ctn_mess" style="" onclick="javascript:afficherlemessage_envoyer({{i}})">إقرء الرسالة</div>
 	<div class="nom_entete_message" style="">De: {{ render(controller("InnovitProfilBundle:Message:nameById",{'id':m.idExp} )) }} </div>
 	<div class="image_entete_message" style=""><img id="" src="{{asset("images/user_icon.png")}}" style="width:100%"/></div>
-	<div class="effacer_ce_message" title="Effacer ce message" style="">مسح</div>
+	<div id="eff_message{{i}}" onclick="javascript:effacer_env({{i}})" class="effacer_ce_message" title="Effacer ce message" style="">مسح</div>
 	</div >
 	<div id="contenu_message_glo_envoyer{{i}}" class="contenu_message_glo" style="">
 	<div class="tri_contenu_message_glo" style=""></div>

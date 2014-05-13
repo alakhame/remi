@@ -1,39 +1,36 @@
-{% extends 'InnovitGeneralBundle:General:Layoutprofil.php.twig' %}
-{%block corp%}
-
-	<form action="{{ path("fos_user_security_check") }}" method="post">
+<div id="div_gauche" class="" style="">  
+	<div id="div_authentification_glob" >
+		<form action="" method="post">
+			<input type="hidden" name="_csrf_token" value="{{ csrf_token }}" />
+			<div id="div_authentification" >
 		
-		<input type="hidden" name="_csrf_token" value="{{ csrf_token }}" />
-		<div id="div_authentification" >
-		
-				
-			<div id="titre_login" style="">
-				المرجو إدخال معلوماتك
+				<div id="login_titre">
+					<div id="partie_1_titre_text">
+						المرجو إدخال معلوماتك
+					</div>
+				</div>	
+				<div>
+					
+					<div style="margin-right:5px" class="input_authentification">
+						<input  style="" class="input"  placeholder="كلمة السر" type="password" id="password" name="_password" required="required"></input>
+					</div>
+					<div style="" class="input_authentification">
+						<input  style="" class="input"  placeholder="اسم التسجيل" type="text" id="username" name="_username" required="required" ></input>
+					</div>
+				</div>
+				<div id="remember_me">
+					<label for="remember_me">garder ma session active</label>
+					<input type="checkbox" id="remember_me" name="_remember_me" value="on" />
+				</div>
+				<div  class="" style="width:20%;margin:auto;margin-top:30px">
+					<input id="entrer" style="" class="" value="دخول"  placeholder="Login " type="submit" name="_submit" >
+					</input>
+				</div>
+				<div class="" style="width:65%;margin:auto;margin-top:10px">
+					<div id="mot_de_passe_oubl"style="">نسيت كلمة السر؟</div>
+					<div id="login_inscription" onclick="javascript:aff_g(1)" style="dislpay:inline-block;width:40%"><div id="" style="">التسجيل من هنا</div></div>
+				</div>
 			</div>
-			
-			<div style="margin-top:40px" class="input_authentification">
-				<input  style="" class="input"  placeholder="" type="text" id="username" name="_username" required="required" ></input>
-				<div class="logi" style="" >اسم التسجيل</div>
-			</div>
-			<div class="input_authentification">
-				
-				<input  style="" class="input"  placeholder="" type="password" id="password" name="_password" required="required"></input>
-				<div class="logi" style="">كلمة السر</div>
-			</div>
-			<div>
-				<input type="checkbox" id="remember_me" name="_remember_me" value="on" />
-				<label for="remember_me">garder ma session active</label>
-			</div>
-			<div class="input_authentification" style="width:100px;margin:auto;margin-top:10px">
-				<input  style="width:100%;text-align:center" class="" value="دخول"  placeholder="Login " type="submit" name="_submit" >
-				</input>
-			</div>
-			<div class="" style="width:65%;margin:auto;margin-top:10px">
-				<div id="mot_de_passe_oubl"style="">نسيت كلمة السر؟</div>
-				<a id="" href="{{path('innovit_general_homepage',{ name:"Accueil"})}}"><div id="login_inscription" style="">التسجيل من هنا</div></a>
-			</div>
-		</div>
-	</form>
-	
-
-{%endblock%}
+		</form>
+	</div>
+</div>
