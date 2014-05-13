@@ -11,16 +11,15 @@ use Symfony\Component\HttpFoundation\Response;
 
 class QuestionController extends Controller
 {
-    public function pickAction($id)
+    public function pickAction()
     {	 
 		$doctrine = $this->getDoctrine();
-		$q=$doctrine->getRepository('InnovitProfilBundle:Question')->findOneById($id); 
-		$response = new Response();
-		$response->headers->set('Content-Type', 'text/xml');
+		$q=$doctrine->getRepository('InnovitProfilBundle:Question')->findBy(array('idCours'=>'4')); 
+		//$response = new Response($q->getRep());
+	//return $response;
+		//$response->headers->set('Content-Type', 'text/xml');
 		$qs[]=$q;
-		return $this->render('InnovitQuestionBundle:Question:pick.xml.twig', array(
-            'qs' => $qs
-        ),$response); 
+		return $this->render('InnovitQuestionBundle:Question:pick.html.twig', array(  'qs' => $q) ); 
 
 	}
 }

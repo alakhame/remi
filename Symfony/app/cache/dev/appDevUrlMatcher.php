@@ -146,14 +146,14 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
         }
 
         if (0 === strpos($pathinfo, '/profil')) {
-            // innovit_profil
-            if (preg_match('#^/profil/(?P<type>etudiant|prof)(?:/(?P<id>[^/]++))?$#s', $pathinfo, $matches)) {
-                return $this->mergeDefaults(array_replace($matches, array('_route' => 'innovit_profil')), array (  '_controller' => 'Innovit\\ProfilBundle\\Controller\\ProfilController::indexAction',  'id' => 4,));
-            }
-
             // innovit_profil_load
             if (0 === strpos($pathinfo, '/profil/special') && preg_match('#^/profil/special/(?P<page>[^/]++)$#s', $pathinfo, $matches)) {
                 return $this->mergeDefaults(array_replace($matches, array('_route' => 'innovit_profil_load')), array (  '_controller' => 'Innovit\\ProfilBundle\\Controller\\ProfilController::loadAction',));
+            }
+
+            // innovit_profil
+            if (preg_match('#^/profil/(?P<type>[^/]++)(?:/(?P<id>[^/]++))?$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'innovit_profil')), array (  '_controller' => 'Innovit\\ProfilBundle\\Controller\\ProfilController::indexAction',  'id' => 4,));
             }
 
         }
